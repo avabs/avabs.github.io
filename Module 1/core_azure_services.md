@@ -78,8 +78,28 @@
 
 #### Azure Terms
 - #### Resource group 
-    - Resources are contained into groups that acts as a logical container
+    - Resources are contained into groups that acts as a logical container. It can be understood as **Space** in Cloud Foundry Environment
 - #### Management Group
     - Manages access, poliy and compliance over multiple subscription
+- #### Azure Resource Manager
+    - It is the deployment and management service for Azure
+    - Describe what you want to deploy
+    - Role based access copntrol 
+    - Tags can be used to organize the resources
 
-    
+#### Azure Regions
+- #### Regions
+    - Geographical area/plane that contains multiple datacenter that are nearby and connected together with low-latency network
+    - **Region Pair** makes Azure more reliable in the case of disaster. Other refion can be used if primary region is down
+- #### Availability Zone
+    - Physically separate data centers within an Azure Region
+    - Zonal Services are specific to a particular zone eg. VMs, Managed Disk
+    - Zonal redundant services replicates automatically across zone eg. SQL Databases
+
+#### Azure Subscription
+- Defines boundaries around Azure products, Serives and Resources
+    - Billing Boundaries
+        - Azure generates separate billing reports and invoices for each subscription
+    - Access based
+        - Specific subscription for each department
+        
