@@ -187,3 +187,71 @@
             - Azure integrates your WAN to provide a connection between datacenter and bracnh offices. l3 connectivity and Azure can be ju8st another office for your organization
             - DNS queries, certificate revocationlist checking and Azure CDN are still send over public internet
 
+### Azure Storage Services
+
+#### Azure Storage Account fundamentals
+    - Blob
+    - File Storage
+    - Disk Storage
+    - Table
+
+- Disk storage fundamentals 
+    - Allows data to be persistently stored and accessed froma n attached virtual hard disk
+
+- Blob storage
+    - Object Storage solution for cloud
+    - Stores text and binary
+    - unstructured data
+    - Access tier
+        - Hot access tier
+            - optimized for storing data that is accessed frequently
+        - Cool
+            - infrequent access and stored for 30 days
+        - Archive
+            - Backups, rarely access and stored for 180 days
+        - Only hot and cool at the account level 
+
+- Azure File Fundamentals 
+    - Fully managed file share in the cloud and accesible via the industry standard server message block and networkj file system
+
+
+#### Azure database and analytics services
+
+- Cosmos DB
+- Support schema less data
+- Support constantly changing data
+- Stores data in atom-record-sequence(ARS) format
+- Then data is abstracted and projected as as API
+- Azure SQL db
+    - PaaS
+    - MS handles everything
+    - You can get control over db administration and optimization activities
+    - Can use Azure data migration
+- Postgres SQL
+    - Offered in 2 manner 
+    - Single Server
+        - Vertical scaling based model
+    - Hyperscale
+        - This model option horizontaly sclaes queries across mutliple machine by using sharding
+
+- Azure SQL Managed Instance
+    - PaaS
+    - Automated provisioning
+    - A configurable backup retention period
+    - SAerver collation is possible 
+
+- Migration 
+    - Azure database mihgraiton service
+    - Big data is continuosly increasing data which will not make sense if looked diretly since it is huige in size, will require gathering insights from the same
+
+- Azure Synapse Analytics
+    - Data warehousing + big data analytics
+
+- Azure HDInsights
+    - Analytics service 
+    - Supports ETL
+    - Data Warehousing 
+    - ML&IOT
+
+- Azure databricks
+    - Unlocks insights from all your data
