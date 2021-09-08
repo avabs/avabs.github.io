@@ -9,7 +9,7 @@
 - VMs are IaaS. Just like a physical computer. Better when we need total control over OS and network.
 
 #### VMs Scale sets
-- Set of indentical VMs, helpful when autoscaling is required
+- Set of identical VMs, helpful when autoscaling is required
 - Can provide highly available environment for an app/service since load can be shared among identical VMs
 
 #### Container & Kubernetes
@@ -17,21 +17,21 @@
 - Basically can run multiple instances of such on single host machines
 - Single Host - VMs - Single Instance
               - Container - Multiple instance
-                - Virtualises the OS instead of Hardware like VMs
+                - Virtualizes the OS instead of Hardware like VMs
 - Container Orchestrator
     - Azure Container Instance - PaaS Directly maintain a container
     - Azure Kubernetes Service (AKS) - Kubernetes
 
 #### App Service
 - Basically PaaS
-- PaaS focuses more on the application management, deployement rather than configuration of OS
+- PaaS focuses more on the application management, deployment rather than configuration of OS
     - Web app
     - API app
     - WebJob - a script/trigger
     - Mobile apps
 
 #### Functions
-- Basically can help in communciation with other Azure services
+- Basically can help in communication with other Azure services
 
 
 #### Azure Batch
