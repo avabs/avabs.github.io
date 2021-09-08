@@ -58,7 +58,7 @@
         - It allows an interpreter to decide how to best achieve that\
   - Azure Resource Manager templates 
         - JSON file
-        - It can have both Azure Power shell and Azure CLI scripts
+        - It can have both Azure PowerShell and Azure CLI scripts
     
 #### Monitoring Services
 

@@ -33,7 +33,7 @@ that you develop
 
 #### Azure Policy
 - Lets you create, assign and manage policies that control your resources
-- Personla and group related policies are called Initiatives
+- Personal and group related policies are called Initiatives
     - Initiative is way of grouping related policies into one set
     - Can help you track compliance state of the product
 - Can control creation of a resource or size of the resource as well as can point out non-compliant resource.

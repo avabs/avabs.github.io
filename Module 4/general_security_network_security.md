@@ -57,7 +57,7 @@
         - data sent in a channel is checked on the basis of their hash if it is not compromised
 
 #### Protect Virtual network by using Azure Firewall
-- Firewall is a network security device taht maonitor incoming an outgoings network traffic decide whether to allows
+- Firewall is a network security device that monitor incoming an outgoings network traffic decide whether to allows
 or block specific traffic
 - Managed cloud based firewall 
     - It is a stateful firewall, analyses the complete content of a network connection

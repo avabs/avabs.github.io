@@ -39,7 +39,7 @@
 - Large scale parallel and high performance computing 
     - Starts a pools of VMs
     - takes a job
-    - requeues if any failures 
+    - requeue if any failures 
     - scales down once works completes
 
 
@@ -50,40 +50,32 @@
 
 - Event-driven scale
     - Timer
-    - Trigger/API or weebhook
+    - Trigger/API or webhook
 - Micro billing
     - Pay as per the usage
 
-#### Azure logic apps 
-
-- More intelligentt then Azure functions, provides more ways to trigger a particular work based on data comparison helpful in enterprise applicatioon 
+#### Azure logic apps
+- More intelligent than Azure functions, provides more ways to trigger a particular work based on data comparison helpful in enterprise application 
 
 
 #### Azure Virtual Desktop
-
 - Connect ot AVD from any secure internet.
 - Centralised on teh azure side since there is no actual system provided to the user's site
-
-
 
 ### Azure Virtual Networking 
 
 #### Isolation and Segmentation
-- Allows to create multiple isolated virtual networks
+- Allows creating multiple isolated virtual networks
 - Can define private Ip address using space by using Public or Private IP Address
 - IP address can be divided into range/subnet
 - Name resolution service is built in Azure and DNS server can be internal or external
 
-
-
-
 #### Internet communication
 - Incoming connection can be defined by a public IP address or public load balancer
 
-
 #### Communication between Azure Resources
 - Virtual connects VMs and as well as other azure resources - App Service, AKS, VM Scale set.
-- We use service endpointsd to connect to other resources such as AzureSQL database and Storage accounts
+- We use service endpoints to connect to other resources such as AzureSQL database and Storage accounts
 
 #### Communication with On-premise resources
 - Point to site VPN
@@ -96,18 +88,18 @@
 #### Route Network traffic
 - Route Table
 - Border Gateway Protocol
-    - Propogates on premise BGP to AZ virtual networks
+    - Propagates on premise BGP to AZ virtual networks
 
 #### Filter Network Traffic
 - Network Security Groups -
     - Filtering traffic based on source or destination IP address, port and protocol
 - Network virtual appliances 
     - Specialized VM that can be compared to a hardened network appliances
-    - Can carry out netework function such as runnign a firewall or performing WAN optimization
+    - Can carry out network function such as running a firewall or performing WAN optimization
 - Peering
     - Enables resources in each VNet to communication with each other
 - UDR 
-    - User defined routing aalwo to control the routing table between subnets within VNets and as well VNets
+    - User defined routing allow to control the routing table between subnets within VNets and as well VNets
 
 #### Connect Virtual Network
 - Azure VPN gateway fundamentals 
@@ -119,10 +111,10 @@
     - Network to network
         - [VNet] ------ [VNet]
 
-    - Can have only one gateway in each virtual network, however it can connect multiple Vnets
+    - Can have only one gateway in each virtual network, however it can connect multiple VNets
     - Policy based VPN Gateway
         - IKE (Internet Key Exchange) is used set security association (an agreement of encryption) between encryption
-            - Static routing, soruce and destination address control hopw traffic is encrypted and they are not included in the routing table 
+            - Static routing, source and destination address control how traffic is encrypted, and they are not included in the routing table 
         - IPSec uses this association and encrypts and decrypts the data packets in tunnel (VPN Tunnel)
         - IP address is defined statically of packets that should be encrypted through each tunnel 
     - Route Based 
@@ -130,12 +122,12 @@
         - Source and destination is not mentioned in every tunnel's end.
         - Supports IKEv2
         - Using any-to-any traffic selection 
-        - In case of this, soruce and destination are not statically defined and differetn routing protocols BGP can create dynamic routing tabels and hence data packets are encrypted based on this 
+        - In case of this, source and destination are not statically defined and different routing protocols BGP can create dynamic routing tables and hence data packets are encrypted based on this 
 
     - Deploy VPN gateways
-        - Prequisites before deploying VPN gateways
+        - Prerequisites before deploying VPN gateways
             - Virtual Network
-                - Basically Virtual Network should have enough address to accomodate on-premise network
+                - Basically Virtual Network should have enough address to accommodate on-premise network
             - Gateway subnet
                 - This is a subnet specifically for VPN gateway
             - Public IP address
@@ -157,15 +149,15 @@
         - VPN gateways are deployed as two instances active/standby
         - If active goes for a toss then Standby assumes the responsibility and takes over
         
-    - ExpresssRoute Fundamentals 
+    - ExpressRoute Fundamentals 
         - Lets you establish connection to microsoft 365, cloud services
         - Can be used any-to-any/ point-to-point Ethernet
-        - Expressroute connection don't go over public internet
+        - ExpressRoute connection don't go over public internet
         - L2 - Data link layer (Node to Node communication)
         - L3 - Network Layer (Addressing and routing between nodes)
 
     - Features & Benefits of ExpressRoute
-        - L3 connection between on-premise and Microssoft Services through a connectivity provides as mentioned previously
+        - L3 connection between on-premise and Microsoft Services through a connectivity provides as mentioned previously
         - Microsoft services across all the regions
         - Dynamic routing using BGP
         - Build In redundancy
@@ -176,7 +168,7 @@
                 - Azure Compute Services
                 - Azure Cloud Services
     - Connectivity model 
-        - Cloud Exchange Colocation
+        - Cloud Exchange Collocation
             - L2 and L3 offered 
             - Can request virtual cross-connection to the microsoft cloud
 
@@ -184,19 +176,19 @@
             - [on-premise] ---- [Azure] 
 
         - Any-to-any 
-            - Azure integrates your WAN to provide a connection between datacenter and bracnh offices. l3 connectivity and Azure can be ju8st another office for your organization
-            - DNS queries, certificate revocationlist checking and Azure CDN are still send over public internet
+            - Azure integrates your WAN to provide a connection between datacenter and branch offices. l3 connectivity and Azure can be ju8st another office for your organization
+            - DNS queries, certificate revocations checking and Azure CDN are still send over public internet
 
 ### Azure Storage Services
 
 #### Azure Storage Account fundamentals
-    - Blob
-    - File Storage
-    - Disk Storage
-    - Table
+- Blob
+- File Storage
+- Disk Storage
+- Table
 
 - Disk storage fundamentals 
-    - Allows data to be persistently stored and accessed froma n attached virtual hard disk
+    - Allows data to be persistently stored and accessed from attached virtual hard disk
 
 - Blob storage
     - Object Storage solution for cloud
@@ -212,16 +204,14 @@
         - Only hot and cool at the account level 
 
 - Azure File Fundamentals 
-    - Fully managed file share in the cloud and accesible via the industry standard server message block and networkj file system
-
-
+    - Fully managed file share in the cloud and accessible via the industry standard server message block and network file system
+    
 #### Azure database and analytics services
-
 - Cosmos DB
 - Support schema less data
 - Support constantly changing data
 - Stores data in atom-record-sequence(ARS) format
-- Then data is abstracted and projected as as API
+- Then data is abstracted and projected as API
 - Azure SQL db
     - PaaS
     - MS handles everything
@@ -232,17 +222,17 @@
     - Single Server
         - Vertical scaling based model
     - Hyperscale
-        - This model option horizontaly sclaes queries across mutliple machine by using sharding
+        - This model option horizontally scales queries across multiple machine by using sharding
 
 - Azure SQL Managed Instance
     - PaaS
     - Automated provisioning
     - A configurable backup retention period
-    - SAerver collation is possible 
+    - Server collation is possible 
 
 - Migration 
-    - Azure database mihgraiton service
-    - Big data is continuosly increasing data which will not make sense if looked diretly since it is huige in size, will require gathering insights from the same
+    - Azure database migration service
+    - Big data is continuously increasing data which will not make sense if looked directly since it is huge, will require gathering insights from the same
 
 - Azure Synapse Analytics
     - Data warehousing + big data analytics
