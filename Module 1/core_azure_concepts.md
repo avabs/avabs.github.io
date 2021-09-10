@@ -82,6 +82,7 @@
 - Tags can be used to organize the resources
 
 ### Azure Regions
+- Azure organizes datacenters into regions
 #### Regions
 - Geographical area/plane that contains multiple datacenter that are nearby and connected together with low-latency network
 - **Region Pair** makes Azure more reliable in the case of disaster. Other region can be used if primary region is down
@@ -89,7 +90,11 @@
 - Physically separate data centers within an Azure Region
 - Zonal Services are specific to a particular zone eg. VMs, Managed Disk
 - Zonal redundant services replicates automatically across zone eg. SQL Databases
-
+- Availability zones are connected through high-speed, private fiber-optic networks.
+#### Azure Region Pair
+- Each Azure region is always paired with another region within the same geography (such as US, Europe, or Asia) at least 300 miles away. 
+- This approach allows for the replication of resources (such as VM storage) across a geography that helps reduce the likelihood of interruptions because of events such as natural disasters, civil unrest, power outages, or physical network outages that affect both regions at once.
+- If a region in a pair was affected by a natural disaster, for instance, services would automatically failover to the other region in its region pair.
 #### Azure Subscription
 - Defines boundaries around Azure products, Services and Resources
 - Billing Boundaries
