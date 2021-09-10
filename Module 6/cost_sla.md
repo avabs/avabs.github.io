@@ -68,4 +68,21 @@
     - Choose cost-effective OS
     
 #### Service level agreement 
-- It is a formal agreement between service company, and the customer includes uptime as well.
+- It is a formal agreement between service company, and the customer includes uptime as well and also includes Downtime.
+- SLA are always 99% or 99.99% percent not 100% because service will require maintenance and that will be some downtime and in order 
+to avoid this, resources have to duplicate and backup should be available to serve customer with 0 downtime.
+- Downtimes are usually cumulative.
+- A service credit is the percentage of the fees you paid that are credited back to you according to the claim approval process.
+- Credits typically increase as uptime decreases
+- Free products typically don't have an SLA.
+- **Azure Status** provides global view of the health of Azure Services and regions
+
+- An availability zone is a unique physical location within an Azure region. 
+  Each zone is made up of one or more datacenters equipped with independent power, cooling, and networking. 
+  These zones use different schedules for maintenance, so if one zone is affected, your virtual machine instance in the other zone is unaffected.
+- To ensure high availability, you might plan for your application to have duplicate components across several regions, known as redundancy
+
+#### Azure Service Lifecycle
+
+- Azure service development phase -> requirement collection -> service released Public Preview Phase -> feedback gathering from customers -> then production ready, this is known as General Availability (GA)
+- Preview services can be accessed.
