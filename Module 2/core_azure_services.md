@@ -243,5 +243,8 @@
     - Data Warehousing 
     - ML&IOT
 
+- Azure Content Delivery Network
+    - Can provide with content to users with low latency
+    
 - Azure databricks
     - Unlocks insights from all your data
