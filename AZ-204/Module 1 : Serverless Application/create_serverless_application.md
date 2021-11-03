@@ -40,3 +40,7 @@ on them, conditions and produces output
   - TimerTrigger - Scheduled trigger
   - BlobTrigger - When blob gets added to storage account
   - CosmosDBTrigger - code excutes in response to updates in CosmosDB
+
+#### Important Points
+- WebJobs are the only technology that permits developers to control retry policies.
+- Azure Logic Apps is the only one of the four technologies that provides a design-first approach intended for developers.
