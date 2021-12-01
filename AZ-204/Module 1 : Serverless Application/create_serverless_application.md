@@ -44,3 +44,21 @@ on them, conditions and produces output
 #### Important Points
 - WebJobs are the only technology that permits developers to control retry policies.
 - Azure Logic Apps is the only one of the four technologies that provides a design-first approach intended for developers.
+
+
+### Creating a serveless application
+
+#### Function App 
+- A function hold in execution environment called function app
+- A Function App may use these types of plan
+  - Consumption Plan
+    - True Serverless since provides automatic scalling and bills only for running of the function and configurable timeout.
+  - Azure App Service Plan 
+    - Function runs continuously on the VM and user's responsible for the application resource and ideal for continuosly running applications/functions
+- Storage account is required, gets used in loogin function executions and managing executions triggers, in the case of **Consumption Plan**, code and configuration file is stored in it.
+- Triggers
+  - Functions are event driven, which means they run in response to an event. The type of event that starts a function is called a trigger. Each function must be configured with exactly one trigger.
+- Bindings
+ - A binding is a declarative way to connect data and services to your function. Bindings interact with various data sources, which means you don't have to write the code in your function to connect to data sources and manage connections--the platform takes care of that complexity for you as part of the binding code. Each binding has a direction--your code reads data from input bindings, and writes data to output bindings. Each function can have zero or more bindings to manage sthe input and output data processed by the function.
+ - Trigger is type of an input binding
+ 
