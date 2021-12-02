@@ -61,4 +61,11 @@ on them, conditions and produces output
 - Bindings
  - A binding is a declarative way to connect data and services to your function. Bindings interact with various data sources, which means you don't have to write the code in your function to connect to data sources and manage connections--the platform takes care of that complexity for you as part of the binding code. Each binding has a direction--your code reads data from input bindings, and writes data to output bindings. Each function can have zero or more bindings to manage sthe input and output data processed by the function.
  - Trigger is type of an input binding
- 
+ - Timer trigger
+  - ![image](https://user-images.githubusercontent.com/36666451/144472301-a888bd70-f994-427e-b151-73f245d6555d.png)
+
+- **Azure Storage** is Microsoft's cloud storage solution that supports all types of data, including: blobs, queues, and NoSQL.
+
+- **Azure Blob Storage** is a solution to store unstructured data which can be appended as well. Useful for log files which is being constantly appended. Blob Storage is great at storing text or binary files.
+
+- In an **Azure Cosmos DB**, a container is used to store a variety of user-generated entities, also called items.
