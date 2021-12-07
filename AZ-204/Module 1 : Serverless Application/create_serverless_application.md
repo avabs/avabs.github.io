@@ -69,3 +69,20 @@ on them, conditions and produces output
 - **Azure Blob Storage** is a solution to store unstructured data which can be appended as well. Useful for log files which is being constantly appended. Blob Storage is great at storing text or binary files.
 
 - In an **Azure Cosmos DB**, a container is used to store a variety of user-generated entities, also called items.
+
+#### Durable functions 
+- Unlike Functions, Durable functions operates in stateful environment.
+  - Event driven code e.g. can wait asynchronously for events and perform task in response
+  - Can be chained together and be ordered
+  - Has orchestration function, which manages workflws (directly coded)
+    - Functions could be both sync and async
+    - state preserve and resource saving is done when function seats idle/waits
+
+- Functions Types 
+  - Client functions are the entry point for creating an instance of a Durable Functions orchestration. They can run in response to an event from many sources, such as a new HTTP request arriving, a message being posted to a message queue, an event arriving in an event stream. You can write them in any of the supported languages.
+
+  - Orchestrator functions describe how actions are executed, and the order in which they are run. You write the orchestration logic in code (C# or JavaScript).
+
+  - Activity functions are the basic units of work in a durable function orchestration. An activity function contains the actual work performed by the tasks being orchestrated.
+
+####
