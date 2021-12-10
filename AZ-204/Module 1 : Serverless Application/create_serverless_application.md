@@ -50,6 +50,7 @@ on them, conditions and produces output
 
 #### Function App 
 - A function hold in execution environment called function app
+- A Function App is a container that specifies the operating system and resources, such as the memory, computing power, and disk space, for running an Azure function. Behind the scenes, an Azure Function App is a collection of one or more virtual machines (VMs) running a web server.
 - A Function App may use these types of plan
   - Consumption Plan
     - True Serverless since provides automatic scalling and bills only for running of the function and configurable timeout.
@@ -85,4 +86,19 @@ on them, conditions and produces output
 
   - Activity functions are the basic units of work in a durable function orchestration. An activity function contains the actual work performed by the tasks being orchestrated.
 
-####
+##### Authorization on the Azure Functions
+- Anonymous 
+  - Anyone can request the API endpoint
+- Function
+  - Function key required to authorize the request sent to Azure Functions. Function specific.
+- Admin
+  - Same as function but has overall access.
+
+#### Azure Functions Core Tools
+- Let's you develop and run function on your local environment
+
+
+#### Secret in Github Webhook
+-When your secret token is set, GitHub uses it to create a hash signature for each payload. This hash signature is passed along with each request in the headers as x-hub-signature.
+
+When your function receives a request, you need to compute the hash using your secret, and ensure that it matches the hash in the request header. GitHub uses an HMAC SHA1 hex digest to compute the hash, so you must calculate your hash in this same way, using the key of your secret and your payload body. The hash signature starts with the text sha1=.
