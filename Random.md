@@ -1,1 +1,0 @@
-- While you can deploy Linux web apps on Azure App Service, there are a number of limitations. App Service on Linux isn’t supported on the shared pricing tier.  You are not able to mix Windows and Linux apps in the same App Service plan. You can’t mix Windows and Linux apps in the same region within the same resource group. s
