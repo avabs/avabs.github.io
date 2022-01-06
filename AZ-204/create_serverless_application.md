@@ -86,6 +86,7 @@ on them, conditions and produces output
 
   - Activity functions are the basic units of work in a durable function orchestration. An activity function contains the actual work performed by the tasks being orchestrated.
 
+  - Orchestrator will call the activity functions.
 ##### Authorization on the Azure Functions
 - Anonymous 
   - Anyone can request the API endpoint

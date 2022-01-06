@@ -41,7 +41,9 @@
 - Azure Event Grid routes the ingested events to event handlers
 - IoT Edge lets you run code on the client side which could be useful for firmware upgrades etc. These are done with the help of Azure IoT edge runtime.
 
-- Azure Service Bus is more generalized Event hub.
+- Azure Service Bus is more generalized Event hub. It is the messaging communication channel between the application and the services.
+    - Topic and Subscription works differently from the Queue, One publishes message to a topic which get distriuted to mutliple subscriber 
+    of it, wherein Queue provides processing of a single message by reciever.
 
 ### Azure Messaging Service
  
