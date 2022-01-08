@@ -26,4 +26,20 @@
         - Page blobs - random access files storage
 
 #### Azure Files
-    - 
+    - Enables file share on the cloud.
+    - Uses Server Message Block Protocol  (SMB) in order to do so.
+    - Equivalent of the on-prem file server and could be mounted on the linux, windows and Mac server.
+
+#### Azure Queues
+    - Provides storage for the message which are used for communication among distributed application, these message could be up to 64kb in the size and AZ Queues are accesible through HTTP or HTTPS connections.
+
+#### Azure Table Storage
+    - Allows you store thge NoSQL database
+    - A Table would contians several entities which need not share the same property and table does not enforce any schema on these entities.
+
+#### Azure Managed Disks 
+    - Azure Managed Disks are used for the VMs.
+    - Disk Roles 
+        - Data - Stores application data
+        - OS - hosts the VM's OS and boot volume
+        - TEMP - not a managed disk
