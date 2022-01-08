@@ -42,4 +42,4 @@
     - Disk Roles 
         - Data - Stores application data
         - OS - hosts the VM's OS and boot volume
-        - TEMP - not a managed disk
+        - TEMP - not a managed disk, store pages and swap files
