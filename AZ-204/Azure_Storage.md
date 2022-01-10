@@ -1,3 +1,6 @@
+#### ARM
+    - ARM provides Infrastructure as code.
+
 ### Azure Storage
 - Azure provides different storage services. These are all under Azure Storage Accounts
     - Blob storage
