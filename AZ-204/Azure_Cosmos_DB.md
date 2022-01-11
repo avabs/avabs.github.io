@@ -1,0 +1,14 @@
+### Azure Cosmos DB
+    - Globally distributed and multi-model database, provides varieties of API to access the database.
+	- You priortize the regions as failover and make regions read, write only as well.
+	- It offers API for SQL, Mongo, Cassandra, Gremlin. With Cosmos DB we can run mutliple database engines
+    - Database as a service - serverless
+	- Cost is determined with the help of Request Units
+    - Partitioning and Indexing
+	- Phycial Partiotions that comprise compute hardware resources and it contains logical partitions
+	- Container is basic abstraction of data sets, where it would span through multiple partitions and this contains your data.
+	- Every document is identifide by it's partition key and row key.
+    - Security 
+	- Supports HTTPS and TLS
+	- Master keys for admins and resource tokens for clients
+	
