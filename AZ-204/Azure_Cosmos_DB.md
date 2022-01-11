@@ -11,4 +11,13 @@
     - Security 
 	- Supports HTTPS and TLS
 	- Master keys for admins and resource tokens for clients
+    - Key-value
+    - Graph
+    - Column-family
+    - Document
+    - SQL
+    - MongoDB (document)
+    - Gremlin (graph)
+    - Cassandra (column-family)
+    - Azure Table Storage (key-value)
 	
