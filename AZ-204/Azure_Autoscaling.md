@@ -6,3 +6,12 @@
 
 - Autoscaling for virtual machines in Azure is supported through Scale sets
 - Azure monitor provides support for autoscale and Azure diagnostics could be used to implement custom logic for autoscaling.
+
+### Azure Redis Cache
+
+	- Temporarly copying frequently accessed data into fast storage (memory) which is close to Application.
+	- Azure Redis Cache is accessible to Application withing Azure and outside to it.
+
+### Azure Content Delivery Network (CDN)
+	- Putting content in the edge servers which could be fetched by user with lesser latency.
+	- When requesting to origin server, origin server will forward the request of the user to point of the presence location which are closer to user.	
