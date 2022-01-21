@@ -95,5 +95,10 @@
 - Automation of technologies using Chef and Puppet.
 - Runbooks could be used for automation, these are collection of the powershell scripts.
 
+### Azure Managed Application
+- Azure Managed Application are the cloud solutions that could be deployed and operated by the customers. Managed Application are published to Azure Marke
+et place so that it is available to all customers. These resources are deployed to Resource Group of the Consumer, where even the publisher of Managed 
+Application has access to.
+
 
 
