@@ -36,6 +36,8 @@
 
 - Azure Event Hub & IoT Hub
     - Event Hub is a door for the events sent by application interfaces to the event hub endpoint where event hub makes sure the event is proper.
+    - Basic Tier of the Event Hub does not support Kafka Messages.
+    - A centralized service to collect data and logs from other Azure services.
     - IoT hub lets you push data back to the endpoints or application which emitted the event
 
 - Azure Event Grid routes the ingested events to event handlers
@@ -44,6 +46,7 @@
 - Azure Service Bus is more generalized Event hub. It is the messaging communication channel between the application and the services.
     - Topic and Subscription works differently from the Queue, One publishes message to a topic which get distriuted to mutliple subscriber 
     of it, wherein Queue provides processing of a single message by reciever.
+    - Example : A mobile application which consists of the multiple backends systems such as Accounting, HR. We can create topics for these backend application so that whenever an event occurs, messages could be published to such topic and another mobile backend can subscribe to these topics and pass on the information **Notification hub** to user's as push notification.
 
 ### Azure Messaging Service
  

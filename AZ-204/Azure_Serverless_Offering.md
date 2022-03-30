@@ -35,6 +35,17 @@ on them, conditions and produces output
 - You pay for time your code runs
 - Code can be hosted on SCM 
 - Integrate within Azure and Third parties
+- Azure Function could be hosted in 3 pricing tiers 
+  - Consumption 
+    - Default hosting plan
+    - Automatic scalling 
+  - Premium 
+    - Provides more control over the compute resource that could be used
+    - Max execution time
+    - Provides virtual network connectivity
+    - Support to run function on the custom linux image. 
+  - Dedicated (App Service) plan 
+    - Runs functions withing your app service plan 
 - Types 
   - HTTPTrigger - on http event
   - TimerTrigger - Scheduled trigger
@@ -87,6 +98,7 @@ on them, conditions and produces output
   - Activity functions are the basic units of work in a durable function orchestration. An activity function contains the actual work performed by the tasks being orchestrated.
 
   - Orchestrator will call the activity functions.
+  - Orchestrator must always call deteministic APIs which returns same output for same input, no matter how often they are called.
 ##### Authorization on the Azure Functions
 - Anonymous 
   - Anyone can request the API endpoint
