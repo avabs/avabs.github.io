@@ -1,10 +1,18 @@
+#### Azure App Service
+
 - While you can deploy Linux web apps on Azure App Service, there are a number of limitations. App Service on Linux isn’t supported on the shared pricing tier.  You are not able to mix Windows and Linux apps in the same App Service plan. You can’t mix Windows and Linux apps in the same region within the same resource group.
 
-- Creating App Service Plan firstly gives better idea of how can App Services are brought into same service container, although If you directly create an App Service it will automatically create App Service Plan.
+- Creating App Service Plan firstly gives better idea of how can App Services are brought into same service container, although If you 
+directly create an App Service it will automatically create App Service Plan.
 
 - App Service Plan can have mutliple application running inside it. Depending upon the kind of pricing tier we have.
 
+- In App service plan, we get Isolated environment where we get the dedicated computing environment
+
 - The Advanced Tools are what App Service deployments are built on top of. The advanced tools engine is called Kudu. 
+
+- By default azure domain names such as azurewebsites are secured and can be accessed over http and https protocols, but having a
+custom domain and securing that requires SSL and TLS certification.
 
 - Azure Container Instances is development and deployment oriented. Provides Hypervisor Isolation, which makes sure that you're organization is not sharing the OS Kernel.
 
