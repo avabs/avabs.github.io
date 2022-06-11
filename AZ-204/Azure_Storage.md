@@ -82,3 +82,23 @@
  - Partition key serves as the means of rounting the request to correct partition.
  - Basically Az takes the hash of the partition key valueand spreads the logical spaces across the physical partition, so it will calculate the hash value and map it to correct logical partition.
  - Hot partition is the scenario when one of the physical partition is loaded with most the data in the database.
+
+- Server Side Capabilities
+    Used withing database engine 
+    - Stored Procedures
+        - Supported by SQL API
+        - Supports Javascript
+        - Works on a single partition key
+    - Triggers 
+        - Supports Java Script
+        - Pre or post
+        - Not guaranteed to be executed, must be specified in the request
+    - User defined Functions
+        - Supports JS
+        - Custom function that could be used in query
+    Outside of the database engine
+    - Change feed
+        - Just like an Azure Function where Cosmos DB trigger is used and every action on the collection is logged.
+        - Can notify you for update or add action but not for delete, there is a workaround.
+        - Not supported for Azure Table API
+
