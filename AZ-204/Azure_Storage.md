@@ -117,3 +117,14 @@ may contain Binary files or text files.
     - Log files which are appended at the end could be an example of append blob
   - Page Blob
     - Random read/write possible in this blob type and anywhere in the file. Example - Azure Virtual Machine 
+- Azure SDK
+  - Collection of the client library.
+- Access Tiers 
+  - Hot
+    - Frequently used data
+  - Cool
+    - Infrequently accessed data stored for at least 30 days
+  - Archived
+    - Data that can be archived for at least 180 days.
+  - Archived of type 'offline' where hot and cool are of type 'online', so setting a blob to archived will not allow changing the data but properties
+    To access data, access tier needs to be converted to hot or cool and process is calledd rehydrating.
