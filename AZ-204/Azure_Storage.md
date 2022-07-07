@@ -26,7 +26,7 @@
         - Block blobs - contians blocks of data, text and binary data
         - Append blobs - same as block, optimized for append, good for logging output
         - Page blobs - random access files storage
-
+    - Azure also provides immutable objecct storage policy where you will not be able to delete or modify
 #### Azure Files
     - Enables file share on the cloud.
     - Uses Server Message Block Protocol  (SMB) in order to do so.
