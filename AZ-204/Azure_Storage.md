@@ -102,3 +102,29 @@
         - Can notify you for update or add action but not for delete, there is a workaround.
         - Not supported for Azure Table API
 
+#### Azure Blob Storage
+- Blob storage has capabilities to store unstructured data which 
+may contain Binary files or text files.
+- Authorising request to Blob storage 
+  - Shared key, which is a account key 
+  - Shared Access Signature which are token that gets appended to blob urls
+  - Azure AD
+  - Anonymous read access
+- Blob types
+  - Block Blob
+    - Here blob will be stored as block, where file could replaced
+  - Append Blob
+    - Log files which are appended at the end could be an example of append blob
+  - Page Blob
+    - Random read/write possible in this blob type and anywhere in the file. Example - Azure Virtual Machine 
+- Azure SDK
+  - Collection of the client library.
+- Access Tiers 
+  - Hot
+    - Frequently used data
+  - Cool
+    - Infrequently accessed data stored for at least 30 days
+  - Archived
+    - Data that can be archived for at least 180 days.
+  - Archived of type 'offline' where hot and cool are of type 'online', so setting a blob to archived will not allow changing the data but properties
+    To access data, access tier needs to be converted to hot or cool and process is calledd rehydrating.
