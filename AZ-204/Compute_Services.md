@@ -100,7 +100,7 @@ on them, conditions and produces output
             - CosmosDBTrigger - code excutes in response to updates in CosmosDB
         - Runtimes provided by the Azure Functions are Docker containers.
         - Azure Function hosting - Windows vs Linux. Windows provide better experience in terms of features than Linux.
-        - ##### Creating a serveless application
+        - #### Creating a serveless application
             - #### Function App 
                 - A function hold in execution environment called function app
                 - A Function App is a container that specifies the operating system and resources, such as the memory, computing power, and disk space, for running an Azure function. Behind the scenes, an Azure Function App is a collection of one or more virtual machines (VMs) running a web server.
