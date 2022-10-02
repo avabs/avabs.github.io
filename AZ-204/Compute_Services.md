@@ -83,16 +83,16 @@ on them, conditions and produces output
         - Code can be hosted on SCM 
         - Integrate within Azure and Third parties
         - Azure Function could be hosted in 3 pricing tiers 
-        - Consumption 
+        - Consumption (Cold Starts)
             - Default hosting plan
             - Automatic scalling 
-        - Premium 
+        - Premium (Pre warmed)
             - Provides more control over the compute resource that could be used
             - Max execution time
             - Provides virtual network connectivity
             - Support to run function on the custom linux image. 
-        - Dedicated (App Service) plan 
-            - Runs functions withing your app service plan 
+        - Dedicated (App Service) plan (VM Sharing)
+            - Runs functions withing your app service plan, so no extra cost for runnign the azure functions
         - Types 
             - HTTPTrigger - on http event
             - TimerTrigger - Scheduled trigger
@@ -115,7 +115,7 @@ on them, conditions and produces output
                 - Bindings
                 - A binding is a declarative way to connect data and services to your function. Bindings interact with various data sources, which means you don't have to write the code in your function to connect to data sources and manage connections--the platform takes care of that complexity for you as part of the binding code. Each binding has a direction--your code reads data from input bindings, and writes data to output bindings. Each function can have zero or more bindings to manage sthe input and output data processed by the function.
                 - Input bindings are the data sources that will be passed to function when it gets triggered.
-                - Trigger is type of an input binding
+                - Trigger is type of an input binding.
                 - Timer trigger
                 - ![image](https://user-images.githubusercontent.com/36666451/144472301-a888bd70-f994-427e-b151-73f245d6555d.png)
                 - Azure Functions requires Storage Account
@@ -155,3 +155,11 @@ on them, conditions and produces output
             - #### Azure Functions Core Tools
                 - Let's you develop and run function on your local environment
 
+            - **function.json** contains bindings, triggers and other configurational information.
+            - **hosts.json** contains global configurations options for all the functions within function app.
+            - **Custom Handlers** are light weight webserver. These based upon languages which supports HTTP primitives. In simpler words, languages which are not part of azure. This is an executable. It is required to maintain a folder structure with follwoing files
+              - hosts.json
+              - local.settings.json
+              - an executable - handler.exe
+              - it should server http request
+              - function.json
