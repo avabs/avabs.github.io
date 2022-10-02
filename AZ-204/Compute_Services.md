@@ -27,11 +27,11 @@ directly create an App Service it will automatically create App Service Plan.
 custom domain and securing that requires SSL and TLS certification.
 
 ## Azure Container Service & Azure Kubernetes Service
-    - Azure Container Instances is development and deployment oriented. Provides Hypervisor Isolation, which makes sure that you're organization is not sharing the OS Kernel.
+- Azure Container Instances is development and deployment oriented. Provides Hypervisor Isolation, which makes sure that you're organization is not sharing the OS Kernel.
 
-    - Azure Kubernetes Service, manage and deploy kuberenetes.
+- Azure Kubernetes Service, manage and deploy kuberenetes.
 
-    - Azure Container Registry. allows to store and manage container image in the central registry.
+- Azure Container Registry. allows to store and manage container image in the central registry.
 
 ## Azure Service Fabric
 - Azure Service Fabric, allows to build and operate always, scalable and distributed apps
