@@ -1,3 +1,6 @@
+## Azure Virtual Machines
+
+
 
 ## Azure Availability Sets
 - Azure consists of racks upon racks of the server and, each rack could be a **Fault Domain**. 
@@ -131,19 +134,30 @@ on them, conditions and produces output
                 - Unlike Functions, Durable functions operates in stateful environment.
                 - Event driven code e.g. can wait asynchronously for events and perform task in response
                 - Can be chained together and be ordered
-                - Has orchestration function, which manages workflws (directly coded)
+                - Has orchestration function, which manages workflows (directly coded)
                     - Functions could be both sync and async
-                    - state preserve and resource saving is done when function seats idle/waits
+                    - State preserve and resource saving is done when function seats idle/waits
 
-            - Functions Types 
-                - Client functions are the entry point for creating an instance of a Durable Functions orchestration. They can run in response to an event from many sources, such as a new HTTP request arriving, a message being posted to a message queue, an event arriving in an event stream. You can write them in any of the supported languages.
+                - Functions Types 
+                    - **Client functions** are the entry point for creating an instance of a Durable Functions orchestration. They can run in response to an event from many sources, such as a new HTTP request arriving, a message being posted to a message queue, an event arriving in an event stream. You can write them in any of the supported languages.
 
-                - Orchestrator functions describe how actions are executed, and the order in which they are run. You write the orchestration logic in code (C# or JavaScript).
+                    - **Orchestrator functions** describe how actions are executed, and the order in which they are run. You write the orchestration logic in code (C# or JavaScript).
 
-                - Activity functions are the basic units of work in a durable function orchestration. An activity function contains the actual work performed by the tasks being orchestrated.
+                    - Activity functions are the basic units of work in a durable function orchestration. An activity function contains the actual work performed by the tasks being orchestrated.
 
-                - Orchestrator will call the activity functions.
-                - Orchestrator must always call deteministic APIs which returns same output for same input, no matter how often they are called.
+                    - Orchestrator will call the activity functions.
+                    
+                    - Orchestrator must always call deteministic APIs which returns same output for same input, no matter how often they are called.
+                    
+                    - Output from the called function can be saved to a variable, which will still hold data even if process recycles or VM reboots. 
+                    This is what I understand from a function being stateful in nature. Hence local state is never lost. 
+                
+                - Patterns of Durable functions
+                    - Function chaining
+                        - Output of the a function is input to the another function
+                    Fan-out/fan-in
+                        - Executing multiple function in parallel and waiting for all of them to finish
+
             - ##### Authorization on the Azure Functions
                 - Anonymous 
                     - Anyone can request the API endpoint
