@@ -48,9 +48,16 @@
     - Gen 2 are Uefi boot based arch, secure boot and can have larger boot volume upto 64 TB.
 - **SSH, RDP and Bastions**
     - SSH (Secure Shell) is protocol to establish a secure connection  between a client and server, happens on port 22.
+        - SSH Key pairs is when you generate out two keys 
+            - Private and public keys
+            - Private Key remains on the local system and public key is stored on VM.
+            - When you SSH, you provide your private key which is matched against public.
     - RDP (Remote Desktop Protocol) is proprietary protocol developed Microsoft which provides a user with GUI to connect to another computer over a
-    network connection, happens on port 3389 using TCP and UDP, you can only connect to windows server via Visual Desktop 
+        network connection, happens on port 3389 using TCP and UDP, you can only connect to windows server via Visual Desktop 
+        - This only works with Windows Server.
     - Bastions, it is an azure service, which gets deployed and lets you connect over browser to the VM
+
+
 ## Azure Availability Sets
 - Azure consists of racks upon racks of the server and, each rack could be a **Fault Domain**. 
 - Availability Sets distributes workload mutliple Fault Domains. 
