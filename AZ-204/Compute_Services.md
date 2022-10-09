@@ -55,9 +55,18 @@
     - RDP (Remote Desktop Protocol) is proprietary protocol developed Microsoft which provides a user with GUI to connect to another computer over a
         network connection, happens on port 3389 using TCP and UDP, you can only connect to windows server via Visual Desktop 
         - This only works with Windows Server.
-    - Bastions, it is an azure service, which gets deployed and lets you connect over browser to the VM
+    - Bastions, it is an azure service, which gets deployed and lets you connect over browser to the VM. It has its own subnet. It would get use where you don't have SSH client or RDP client such as chromebook.
 
+- **Windows vs Linus Server**
+    - Windows server requires a license
+    - Requires user name and password
+    - Much larger instancee to run Windows at least a B2
+    - Linux requires no licenses
 
+- **Update Management**
+    - Allows to manage and install OS patches and updates for both windows and linux that are deployed in Azure
+      , on-premises, or in other cloud providers.
+      
 ## Azure Availability Sets
 - Azure consists of racks upon racks of the server and, each rack could be a **Fault Domain**. 
 - Availability Sets distributes workload mutliple Fault Domains. 
