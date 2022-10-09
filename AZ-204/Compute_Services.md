@@ -1,7 +1,56 @@
 ## Azure Virtual Machines
+- Lets you choose your OS, memory, and storage.
+- Comes at the cost of maintaining the software level services such OS patches.    
+- These are billed at hourly rate.
+- SLA of 99.9% (When all the storage options are premium)
+- Components when VM gets created
+    - **Network Security Group**
+        - Attached to Network Interface Component, Virtual firewall with rules around ports and protocols.
+    - **Network Interface Component** 
+        - A device that handles the ip and network communication 
+    - **Virtual machine** itself
+    - **Public IP Address**
+    - **Virtual Network** - Network where your VM will reside
+- You can bring your linux byh creating a Linux Virtual Hard Disk (VHD)
 
+- **Cloud-Init**
+    - Cloud-init is the industry standard multi-distribution method for cross-platform cloud instance initialization. It is supported across all major public cloud providers, provisioning systems for private cloud infrastructure, and bare metal installations.
+    - Cloud instance initialization is the process of the preparing the instance with all the configuration data for the operating system and runtime environment.
+        - Cloud instances are intialized from a disk image and instance data
+            - Meta-data
+            - User-data - it is the script that you want to run when an instance first boots up. Eg. Install Apache web-server
+            - Vendor-data
+    - ARM (infrastructure as code) is cloud init underneath
+    - Cloud init only works for linux distribution
 
-
+- Azure VMs are categorized into 
+    - Types
+        - General Purpose
+        - Compute Optimized  
+        - Memory Optimized
+        - Storage Optimized
+        - GPU
+        - High Performance Compute
+    - Size
+        - Also called series and SKU 
+        - Multiple options are there        
+        - B, D*
+        - F* 
+        - E*, M 
+        - L*
+        - N*
+        - H*
+- Azure Compute Unit (ACU)
+    - Provides a way of comparing compute performance across Azure SKUs. It is standardized on a Small (Standard_A1) with a value of 100
+- Hyper-V is the Microsoft's hardware virtualization product. How we have Virtual Box for linux and MacOS.
+- Azure Gen 1 and Gen 2
+    - Gen 1 are the BIOS boot based arch
+    - Gen 2 are Uefi boot based arch, secure boot and can have larger boot volume upto 64 TB.
+- **SSH, RDP and Bastions**
+    - SSH (Secure Shell) is protocol to establish a secure connection  between a client and server, happens on port 22.
+    - RDP (Remote Desktop Protocol) is proprietary protocol developed Microsoft which provides a user with GUI to connect to another computer over a
+    network connection, happens on port 3389 using TCP and UDP, you can only connect to windows server via Visual Desktop 
+    - Bastions, it is an azure service, which gets deployed and lets you connect over browser to the VM
 ## Azure Availability Sets
 - Azure consists of racks upon racks of the server and, each rack could be a **Fault Domain**. 
 - Availability Sets distributes workload mutliple Fault Domains. 
