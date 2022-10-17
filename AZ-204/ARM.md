@@ -1,13 +1,55 @@
-### Azure Resource Management 
+### Infrastructure as Code (IaC)
+- Managing and provisioning computer data centers/ infra through code.
+- Types
+	- Declarative
+	- Imperative 
 
-- ARM JSON templates consists of 5 sections 
+- With ARM templates you can: 
+	- ARM templates are declarative. (you get exactly what you define) 
+	- stand up, tear down or share entire architectures in minutes 
+	- Reduce configuration mistakes 
+	- Establish an architecture baseline for compliance 
+	- **Modularity** Break up your architecture in multiple files and reuse them 
+	- **Extensibility** Add PowerShell and Bash scripts to your templates 
+	- Testing You can use the ARM template tool kit (arm-ttk) 
+	- Preview Changes Before you create infrastructure via template, see what it will create 
+	- **Built-In Validation** Will only deploy your template if it passes 
+	- Tracked Deployments Keep track of changes to architecture over time 
+	- **Policy as Code** Apply Azure policies to ensure you remain compliant 
+	- **Microsoft Blueprints** (establishes relationship between resource and the template) 
+	- **Cl/CD integration**
+	- Exportable Code (exporting the current state of a resource groups and resources) 
+	- Authoring Tools Visual Studio Code has advanced features for authoring ARM templates
+
+### Azure Resource Management 
+- ARM templates are declarative in nature. You get exactly what you have defined.
+- ARM JSON templates consists of
+	- Schema
+		- Describes the proeprties that are available within a template
+	- Content Version
+		- Version of the template
+	- Api Profile
+		- Use this property to avoid having to provide the API version
 	- Parameters
 		- Input parameters such as resource name, location and similar input parameters are generally part of this section.
+		- Allows passing of the variables to the ARM templates
+		- types of parameters 
+			- string, securestring, int, bool, object, secureObject and array
 	- Functions 
 		- Built-in functions on datatypes and other object of ARM template and user defined functions.
+		- 
 	- Variables
-		- Constants that can be used in the template
+		- Constants that can be used in the template, these are reusable. 
+		- Variables can be nested
 	- Outputs
 		- Output of the functions, useful when nesting another template
 	- Resources
-		- Resources that are to be deployed
+		- Resources that are to be deployed or updated
+		- General sections of the Resource
+			- type 
+				- Type of the azure resource, could be a VM or database
+			- apiVersion
+				- version of the REST API to use for the resource
+			- name
+			- location
+			- other properties
