@@ -96,10 +96,48 @@ custom domain and securing that requires SSL and TLS certification.
 
 ## Azure Container Service & Azure Kubernetes Service
 - Azure Container Instances is development and deployment oriented. Provides Hypervisor Isolation, which makes sure that you're organization is not sharing the OS Kernel.
-
 - Azure Kubernetes Service, manage and deploy kuberenetes.
-
 - Azure Container Registry. allows to store and manage container image in the central registry.
+
+## Azure Container Instances 
+- Package, deploy and manage cloud applications using containers. Fully managed docker as service.
+- You only deal with containers here without having to worry about the virtual machine setup.
+- Ideally for 
+    - Simple application
+    - Task Automation
+    - Build Jobs
+- Can be provisioned within seconds
+- Have custom sizing of the vCPUs, Memory and GPUs where VMs sizes are determined.
+- Can deploy both windows and linux containers
+- Can persist storage with Azure Files
+    - Secret Volume, Empty Directory and Cloud Git Repo
+- ACIs are accessed via a fully qualified domain name
+- Can pull images from 
+    - ACR
+    - dockerhub
+    - private registries
+- Container Groups are container groups which gets scheduled on the same host machine, these share 
+    - lifecycle
+    - resources
+    - network 
+    - storage volumes
+- Container Groups are similar to Kubernetes Pods
+- Multi container groups currently supports only Linux containers
+- ![image](https://user-images.githubusercontent.com/36666451/196249062-96b47922-570f-4f49-99ba-8859ab086962.png)
+- Ways to creats multi container groups 
+    - ARM
+    - YAML
+- Restart Policy 
+    - Always, Never and OnFailure
+- Commands are 
+    - az container logs, az container exec 
+
+
+## Azure Container Registry
+- A private registry to maintain and create your docker images.
+- Managed private docker registry based upon **open-source docker registry 2.0**
+- Azure registry tasks to build container images in Azure
+- ACR tasks allow you to automate OS and framework patching for your docker containers
 
 ## Azure Service Fabric
 - Azure Service Fabric, allows to build and operate always, scalable and distributed apps
