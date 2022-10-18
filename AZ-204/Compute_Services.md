@@ -77,23 +77,58 @@
 
 
 ## Azure App Service
+- Azure App Service is HTTP based service for hosting web applications, REST APIs, and Mobile back ends.
+- It is PaaS, so it's the Heroku equivalent for Azure.
+- Creating App Service Plan firstly gives better idea of how can App Services are brought into same service container, although If you directly create an App Service it will automatically create App Service Plan.
+- It takes care of the following underlying infrastructure
+    - Security patches for OS and languages
+    - Load Balancing
+    - Autoscaling
+    - Automated manager
+- App service makes it easy to implement common integration and features such as 
+    - Azure DevOps (For Deployments)
+    - Github Integration
+    - Docker Hub Integration
+    - Package Management
+    - Custom domains
+    - Attaching TLS/SSL certificates
+- Pricing Tiers
+    - Shared Tier
+    - Dedicated Tier
+    - Isolated Tier
+- Azure App service can also run docker single or multi-containers
 - While you can deploy Linux web apps on Azure App Service, there are a number of limitations. 
 - App Service on Linux isn’t supported on the shared pricing tier.
 - You are not able to mix Windows and Linux apps in the same App Service plan. 
 - You can’t mix Windows and Linux apps in the same region within the same resource group.
-
-- Creating App Service Plan firstly gives better idea of how can App Services are brought into same service container, although If you 
-directly create an App Service it will automatically create App Service Plan.
-
 - App Service Plan can have mutliple application running inside it. Depending upon the kind of pricing tier we have.
-
-- In App service plan, we get Isolated environment where we get the dedicated computing environment
-
 - The Advanced Tools are what App Service deployments are built on top of. The advanced tools engine is called Kudu. 
+- By default azure domain names such as azurewebsites are secured and can be accessed over http and https protocols, but having a custom domain and securing that requires SSL and TLS certification.
 
-- By default azure domain names such as azurewebsites are secured and can be accessed over http and https protocols, but having a
-custom domain and securing that requires SSL and TLS certification.
+**Runtime Environment**
+- A runtime for Azure App Service will be a pre-defined container that your programming language and commonly used libs for that language installed.
 
+Solution for language that are not supported 
+- Create a custom docker container
+- Deploy it to ACR 
+- Deploy image to App Service 
+
+**Deployment Slots**
+- Create different enviroments of your web application associated to a different hostname. This is useful when need a staging or QA environment
+- You can swap environment, this is how you can perform a Blue/Green deployment
+
+**App Service Environment**
+- Provides a fully isolated and dedicated environment for securely running App Service apps at high scale
+- This allows 
+    - Windows Web app
+    - Linux Web App
+    - Docker containers
+    - Mobile apps
+    - Function
+- Ideal for workloads that require
+    - Very high scale 
+    - Isolation and secure network access
+    - High memory utilization
 ## Azure Container Service & Azure Kubernetes Service
 - Azure Container Instances is development and deployment oriented. Provides Hypervisor Isolation, which makes sure that you're organization is not sharing the OS Kernel.
 - Azure Kubernetes Service, manage and deploy kuberenetes.
