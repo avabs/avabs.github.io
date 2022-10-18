@@ -137,7 +137,11 @@ custom domain and securing that requires SSL and TLS certification.
 - A private registry to maintain and create your docker images.
 - Managed private docker registry based upon **open-source docker registry 2.0**
 - Azure registry tasks to build container images in Azure
-- ACR tasks allow you to automate OS and framework patching for your docker containers
+- ACR tasks allow you to automate OS and framework patching for your docker containers.
+- Deployment targets where images could be pulled
+    - kuberntes
+    - DC/OS
+    - docker swarm
 
 ## Azure Service Fabric
 - Azure Service Fabric, allows to build and operate always, scalable and distributed apps
