@@ -129,6 +129,30 @@ Solution for language that are not supported
     - Very high scale 
     - Isolation and secure network access
     - High memory utilization
+- ASEs can be deployed in single or across mutliple regions. Ideal for horizontal scaling stateless application tiers in support of high requests per second (RPS) workloads
+- ASE only supported in Isolated tier
+- WAF can be applied here.
+- ASEs can be deployed to availability zones using zone pinning.
+
+- Deployment types for an ASE
+    - External ASE
+        - Exposes the ASE hosted app on an internet-accessible IP address.
+    - ILB ASE
+        - Addition of Internal Load Balancer is the only difference here.
+
+**Deployment**
+The action of pushing changes or updates from a local environment or repository into a remote environment. 
+Azure App Services provides many ways to deploy your applications: 
+- Run from Package 
+- Deploy ZIP or WAR (Uses Kudu) 
+- Deploy via FTP 
+- Deploy via cloud sync (Dropbox or One Drive) 
+- Deploy continuously (GitHub, BitBucket, and Azure Repos) uses Kudu and Azure Pipelines 
+- Deploy using a custom container Cl/CD pipeline (Deploy for Docker Hub or Azure Container Registry) 
+- Deploy from local Git (Kudu build server,) 
+- Deploy using Github Actions 
+- Deploy using Github Actions containers 
+- Deploy with template (ARM templates) 
 ## Azure Container Service & Azure Kubernetes Service
 - Azure Container Instances is development and deployment oriented. Provides Hypervisor Isolation, which makes sure that you're organization is not sharing the OS Kernel.
 - Azure Kubernetes Service, manage and deploy kuberenetes.
