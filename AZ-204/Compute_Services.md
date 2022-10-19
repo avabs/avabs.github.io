@@ -93,7 +93,7 @@
     - Custom domains
     - Attaching TLS/SSL certificates
 - Pricing Tiers
-    - Shared Tier
+    - Shared Tier - Free and Shared - Linux based instances are not supported
     - Dedicated Tier
     - Isolated Tier
 - Azure App service can also run docker single or multi-containers
@@ -105,7 +105,7 @@
 - The Advanced Tools are what App Service deployments are built on top of. The advanced tools engine is called Kudu. 
 - By default azure domain names such as azurewebsites are secured and can be accessed over http and https protocols, but having a custom domain and securing that requires SSL and TLS certification.
 
-**Runtime Environment**
+### Runtime Environment
 - A runtime for Azure App Service will be a pre-defined container that your programming language and commonly used libs for that language installed.
 
 Solution for language that are not supported 
@@ -113,11 +113,11 @@ Solution for language that are not supported
 - Deploy it to ACR 
 - Deploy image to App Service 
 
-**Deployment Slots**
+### Deployment Slots
 - Create different enviroments of your web application associated to a different hostname. This is useful when need a staging or QA environment
 - You can swap environment, this is how you can perform a Blue/Green deployment
 
-**App Service Environment**
+### App Service Environment
 - Provides a fully isolated and dedicated environment for securely running App Service apps at high scale
 - This allows 
     - Windows Web app
@@ -140,19 +140,32 @@ Solution for language that are not supported
     - ILB ASE
         - Addition of Internal Load Balancer is the only difference here.
 
-**Deployment**
+### Deployment
 The action of pushing changes or updates from a local environment or repository into a remote environment. 
 Azure App Services provides many ways to deploy your applications: 
 - Run from Package 
+    - Since other deployement get mounted at /home/site/wwwroot, but in case of package the zip itself becomes the readonly wwwroot so it escapes the filelock conflicts
 - Deploy ZIP or WAR (Uses Kudu) 
+    - Kudu engine provides CI based deployments, it is the engine behind git deployments
 - Deploy via FTP 
+    - Needs FTP client and just drag and drop
 - Deploy via cloud sync (Dropbox or One Drive) 
 - Deploy continuously (GitHub, BitBucket, and Azure Repos) uses Kudu and Azure Pipelines 
 - Deploy using a custom container Cl/CD pipeline (Deploy for Docker Hub or Azure Container Registry) 
 - Deploy from local Git (Kudu build server,) 
 - Deploy using Github Actions 
 - Deploy using Github Actions containers 
-- Deploy with template (ARM templates) 
+- Deploy with template (ARM templates
+
+### WebJobs
+- Program or script runs in the same instance as a web app, API app, or mobile app.
+- Not supported by App Service on Linux
+- Types
+    - Continuous
+        - runs continuosly until stopped
+    - Triggered
+        - run only when triggered
+
 ## Azure Container Service & Azure Kubernetes Service
 - Azure Container Instances is development and deployment oriented. Provides Hypervisor Isolation, which makes sure that you're organization is not sharing the OS Kernel.
 - Azure Kubernetes Service, manage and deploy kuberenetes.
