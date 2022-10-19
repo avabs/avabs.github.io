@@ -78,7 +78,7 @@
 
 ## Azure App Service
 - Azure App Service is HTTP based service for hosting web applications, REST APIs, and Mobile back ends.
-- It is PaaS, so it's the Heroku equivalent for Azure.
+- It is PaaS, so it's the Heroku equivalent for Azure or AWS Elastic Beanstalk
 - Creating App Service Plan firstly gives better idea of how can App Services are brought into same service container, although If you directly create an App Service it will automatically create App Service Plan.
 - It takes care of the following underlying infrastructure
     - Security patches for OS and languages
@@ -94,7 +94,7 @@
     - Attaching TLS/SSL certificates
 - Pricing Tiers
     - Shared Tier - Free and Shared - Linux based instances are not supported
-    - Dedicated Tier
+    - Dedicated Tier - Basic, Standard, Premium, PremiumV2 and, PremiumV3
     - Isolated Tier
 - Azure App service can also run docker single or multi-containers
 - While you can deploy Linux web apps on Azure App Service, there are a number of limitations. 
