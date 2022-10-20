@@ -21,3 +21,5 @@
     - Cassandra (column-family)
     - Azure Table Storage (key-value)
 	
+##### Change feed
+- Azure Cosmos DB exposes a "change feed". The change feed support in Azure Cosmos DB works by listening to a database container for changes.

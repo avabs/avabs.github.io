@@ -1,8 +1,3 @@
-#### Other Services
-- Azure Log Analytics is where all the logs are stored for the analysis
-- Azure Automation is the service which lets you automate few mundane tasks such as the update management, patching of the VMs.
-
-
 #### Cloud Design Pattern
 - Retry
 - Cache-aside

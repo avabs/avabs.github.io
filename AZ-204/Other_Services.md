@@ -5,7 +5,6 @@
 - **Azure Cognitive Services API** are the ready-made model which can be incorporated in an application for leveraging cognitive services such as speech-to-text. **Azure Bot Service** could be helpful for creating a interactive agents such as chatbots.
 
 ### IoT
-
 - Azure Event Hub & IoT Hub
     - Event Hub is a door for the events sent by application interfaces to the event hub endpoint where event hub makes sure the event is proper.
     - Basic Tier of the Event Hub does not support Kafka Messages.
@@ -75,5 +74,32 @@
 et place so that it is available to all customers. These resources are deployed to Resource Group of the Consumer, where even the publisher of Managed 
 Application has access to.
 
+### Autoscale
+- Vertical
+	- Changing the capacity of the current resource
+- Horizontal 
+	- Adding more of the same resource type or application
+- Autoscaling for virtual machines in Azure is supported through **Azure VM Scale Sets (VMSS)**, which are identically configured. A VM scale set service is used to design sets of identical and load-balanced Virtual Machines (VMs).
+- Azure monitor provides support for autoscale and Azure diagnostics could be used to implement custom logic for autoscaling.
+
+### Azure Redis Cache
+- Temporarly copying frequently accessed data into fast storage (memory) which is close to Application.
+- Azure Redis Cache is accessible to Application withing Azure and outside to it.
+
+### Azure Content Delivery Network (CDN)
+- Putting content in the edge servers which could be fetched by user with lesser latency.
+- When requesting to origin server, origin server will forward the request of the user to point of the presence location which are closer to user.	
+
+### Azure API Management
+- Cloud Service that is used to publish, secure, transform and maintain the API.
+- Comping mutliple application exposing APIs and functions into a single entry point.
+- We can use API management to forward the requests.
+
+### Custom Handlers
+- a custom handler is a web server. The web server receives events from the Functions host. You then have an opportunity to write code in your preferred language to respond to the events.
+- A message queue is a software component that's used to handle messaging between processes, threads, or applications. A queue can store a message, and workers can fetch the message when it's a good time.
 
 
+#### Other Services
+- Azure Log Analytics is where all the logs are stored for the analysis
+- Azure Automation is the service which lets you automate few mundane tasks such as the update management, patching of the VMs.
