@@ -195,7 +195,7 @@ Azure App Services provides many ways to deploy your applications:
     - storage volumes
 - Container Groups are similar to Kubernetes Pods
 - Multi container groups currently supports only Linux containers
-- ![image](https://user-images.githubusercontent.com/36666451/196249062-96b47922-570f-4f49-99ba-8859ab086962.png)
+- ![multi](https://user-images.githubusercontent.com/36666451/196981849-c8bf80c5-94b7-469b-b746-755bd25084d8.png)
 - Ways to creats multi container groups 
     - ARM
     - YAML
