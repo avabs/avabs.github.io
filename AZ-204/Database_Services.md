@@ -110,6 +110,9 @@
         - Throughput exclusive to a container
     - Shared 
         - Throughout is shared among the container
-##### Change feed
-- Azure Cosmos DB exposes a "change feed". The change feed support in Azure Cosmos DB works by listening to a database container for changes.
+- Two ways to read data from Cosmos DB
+    - Points Reads - Key/value lookup on a Single Item ID and partition key - 1 RUs 
+    - Queries - A query allows you to return multiple items - At least 2.3 RUs 
+- Request Units 
+- Azure Cosmos DB exposes a "change feed". The change feed support in Azure Cosmos DB works by listening to a database container for changes. DynamoDB has streams. Change feed is supported by all APIs except Table API. 
 ![image](https://user-images.githubusercontent.com/36666451/196996297-9bec247c-2adf-4b3a-8082-bb5501632150.png)
