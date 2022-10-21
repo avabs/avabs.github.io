@@ -1,21 +1,39 @@
-### Azure Storage
+### Azure Storage Accounts
+- Contains all of your Azure Storage data objects: blobs, files, queue, table and disks
+- Azure provides different types of Storage Accounts 
+    - General purpose v1 (legacy)
+    - General purpose v2
+    - Blobstorage (legacy)
+    - Block Blob storage
+    - File Storage
+- These differs by there features 
+    - Supported Services - Blob, File, Queue, Table, Disk and Data Lake
+    - Performance Tier - Standard (HDD) and Premium (SSD) - IOPS based, higher the IOPS better read/write speeds
+    - Access Tier - Hot, cool and archive
+    - Replication - Redundancy to the zones
+    - Deployment Model - ARM or classic
+- **Storage Types**
+    - ![image](https://user-images.githubusercontent.com/36666451/197263447-dfdd00c7-489c-461e-afe0-962ddf566e33.png)
+
+#### Azure Storage Services
 - Azure provides different storage services. These are all under Azure Storage Accounts
-    - Blob storage
+    - **Blob storage**
         - Storage for the object, unstructed data such as text and binary.
-    - Azure Queues
+    - **Azure Queues**
         - Provides storage for the messages.
         - A message could be <= 64kb
-    - Azure Tables
+    - **Azure Tables**
         - For NoSQL data
         - Provides storage for key/value data and schema-less design
-    - Azure Files
-        - File share system
+    - **Azure Files**
+        - File share system for cloud or on prem.
         - Could be mounted on multiple OSs - Windows, Linux and Mac
-    - Azure Disks
+    - **Azure Disks**
         - Block level storage volumes
         - Provides storage capabilites for the VMs
         - Just like a physical disks - HDD, SDD disks
 - Containers could be created in order to further categorize data into these above storage types
+
 #### Azure Blob Storage 
     - Hierarchy of the blob - Storage Account >> Container  >> Blob
     - Containers withing blob storage are used to organize the blobs just like directories.
@@ -24,6 +42,7 @@
         - Append blobs - same as block, optimized for append, good for logging output
         - Page blobs - random access files storage
     - Azure also provides immutable objecct storage policy where you will not be able to delete or modify
+     
 #### Azure Files
     - Enables file share on the cloud.
     - Uses Server Message Block Protocol  (SMB) in order to do so.
