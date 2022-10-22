@@ -12,13 +12,31 @@
 	- Premium 1 Hybrid Arch, Advanced Group Access, Conditional Access
 	- Premium 2 Identity Protection, Identity Governance
 - Active Directory is the on-premise component and it is somewhat parent of Azure AD
-### Azure Domain Services
+
+- AD terminology
+	- ![Screenshot from 2022-10-22 01-42-00](https://user-images.githubusercontent.com/36666451/197324003-1f612d0c-8258-49e0-83e0-0cdd8d0c7288.png)
+
+- AD Tenant
+	- Represents an organization
+	- It's a dedicated Azure AD Service instance.
+
+- For ways to assign access rights 
+	- Direct Assignment
+	- Group Assignment
+	- Rule based assignment
+	- External Authority Assignment
+
+### AD Domain Services 
+	- Provides domain services such as Domain Joins, Group Policies, LDAP, Kerberos/ NTLM Authentication
+	- You can use these services without need to deploy, manage or patch the domain controllers.
+	- This is useful when moving into Azure AD and some domain services are not supported.	
 	- Let you join the VM to a domain without having to deploy or manage different domain controller.
 	- Provides following services 
 		- Domain join
 		- Group policy
 
-### Hybrid Identity (Cloud & On Prem)
+### Azure AD Connect
+	- It's a hybrid service to connect your on-premise Active Directory to your Azure Accounts
 	- PHS (Password Hash Synchronisation)
 		- Sign in Method
 		- This is accopmlished by synchronising the hash of the hash of user's on prem AD password on the cloud
@@ -31,7 +49,8 @@
 	- Federation
 		- Collection of the domain with an established trust.
 		- Ensures that all user authenication happens on the on-prem.
-		
+	- Health Monitoring - Robust monitoring and central location for both cloud and on-prem
+	- Synchronization - Ensuring that on-prem and cloud data matches		
 
 ### SSO 
 	- SSO methods
