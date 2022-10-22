@@ -74,3 +74,47 @@ security tokens.
 
 ### Managed Identities for Azure Resources
 	- Allow to access azure service/resource which supports Azure AD without having to store the secret in the code (roughly).
+
+## Roles in Azure 
+
+### Azure Roles
+- RBAC System and built on top of ARM
+- Two types of roles
+	- BuiltIn
+	- Custom
+- Role Assignment is consists of these three elements
+	- Security prinicipal
+		- could be user, group, service principal, managed identity
+	- Role definition
+		- Collection of the permission
+	- Scope
+	- Set of resources that access for the Role Assignment applies to. 
+
+
+### Classic Administrators
+- This is original role system
+- It has three types of Role
+	- Account Administrator - Billing owner fo the subscription. Has no access to azure portal.
+	- Service Administrator - Same access as user assigned the Owner role at subscription scope. Full access to Azure portal
+	- Co-Administrator - same access of a user who is assigned the Owner role at the subscription
+
+
+### Azure AD Roles
+- Azure AD roles are used to manage Azure AD resources in a directory.
+	- Create or edit users
+	- Assign admin roles to others
+	- Reset user passwords
+	- Manage user license
+	- Manage domains
+- Built in Azure AD Roles
+	- Global admin - Full Access to everything
+	- User admin - Full access but limited to user management
+	- Billing admin - makes purchases, manage subscriptions and support tickets
+- You need p1 or p2 for custom roles
+
+
+### Azure Policies
+- Ensures the compliance of the resource whereas Azure Role deals with the access to the resources
+
+### Cheatsheet
+![image](https://user-images.githubusercontent.com/36666451/197333576-114c9fc1-0303-417e-9420-4e61132d55a5.png)
