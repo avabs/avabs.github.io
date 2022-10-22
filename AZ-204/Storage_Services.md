@@ -110,3 +110,74 @@ may contain Binary files or text files.
     - Data that can be archived for at least 180 days.
   - Archived of type 'offline' where hot and cool are of type 'online', so setting a blob to archived will not allow changing the data but properties
     To access data, access tier needs to be converted to hot or cool and process is calledd rehydrating.
+
+### Azure Key Vault
+- Helps you safeguard cryptographic keys and other secrets used by cloud apps and services.
+- Focuses on 
+    - Certificate Management
+        - Easily provision, manage and deploy public and private SSL certificates for use with Azure and internal connected resources
+    - Key Management
+        - Create and control the encryption keys used to encrypt your data
+    - Secret Management
+        - Stores password, token, certs and other secrets
+- HSM and FIPS
+    - Hardware Security Module
+        - Hardware designed to store encryption keys
+    - Federal Information Processing Standard 
+        - US and canadian goverment standard that specifies the security requirements for cryptographic modules that protect sensitive information
+        - HSM that are multi-tenant are **FIPS 140-2 Level 2 compliant**
+        - HSM that are single-tenant are **FIPS 140-2 Level 3 compliant**
+- Vault stores secrets and keys can be protected by software or **FIPS 140-2 Level 2 validated HSMs**
+- Azure Key Vault provides two types of container
+    - Vaults
+    - HSM Pools
+- Pricing Tiers 
+    - Standard
+    - Premium
+        - HSM Backed Keys/ Software backed 
+- Keys
+    - When creating keys, there are three options
+        - Generate - Azure will generate key            
+            - RSA (Rivest - Shamir - Adleman) or EC (Elliptic Curve cryptography)
+        - Import - Importing a RSA key
+        - Restore backup - Restore a key from a backup
+    - For Premium, we have options for HSM as well.
+    - **Microsoft managed keys (MMK)** are keys managed by microsoft. Not shown in key vault.
+    - **Customer Managed Keys (CMK)**  are keys you create in Azure Key Vault. 
+
+- Double encryption
+    - Storage Accounts 
+        - Infrastructure Encryption 
+            - By default, AZ encrypts storage account data at rest, this adds second layer of encryption to the data
+    - Azure Disk 
+        - Double Encryption
+            - Two or more layers of independent encryption layers are enabled to protect against the compromises of any one of the layer.
+
+    - Microsoft has a two layered approach each for Data-at-rest and In-transit
+        - Data at rest
+            - Disk Encryption using CMK
+            - Infrastructure Encryption using platform managed keys 
+        - In transit
+            - TLS 1.2
+            - Additional layer of encryption provided at the infrastructure layer
+- China used FIPS - 140 - Level 1 whereas other regions go for level 2 for the secret storage
+- Secrets are always encrypted
+
+- X509 Certificate
+    - **PKI (Public Key Infrastructure)** 
+        - PKI is a set of roles, policies, hardware, software and procedures needed to create, manage, distribute, use, store and revoke digital certificates and manage public-key encryption. 
+    - It is a standard defined by Internation Telecommunication Union (ITU) for public key certifications
+    - Used with 
+        - SSL/TLS and HTTPS
+        - Signed and encrypted email
+        - Code signing
+    - A certificate contains
+        - An identity - hostname, organization or individual
+        - A public key - RSA, DSA, ECDA etc
+    - CA (certificate authority)
+        - It issues the digital certificates
+        - A trusted third party by owner of the certificate and party relying on the certificate
+    - Certificate Formats
+        - PEM
+        - CER
+        - PFX
