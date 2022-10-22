@@ -1,10 +1,17 @@
 ### Azure AD
+- It is identity and access management service, which helps your employees sign in and access resources.
 - Allows user to access
 	- External Application 
 	- Offcie 365 and other saas application
 	- Interal Applications
 	- Cloud application deployed 
 
+- 4 editions of the Azure AD
+	- Free - MFA, SSO, Basic Security and Usage Reports, User Management
+	- Office 365 Apps Company Branding, SLA, Two Sync between On Premise and Cloud
+	- Premium 1 Hybrid Arch, Advanced Group Access, Conditional Access
+	- Premium 2 Identity Protection, Identity Governance
+- Active Directory is the on-premise component and it is somewhat parent of Azure AD
 ### Azure Domain Services
 	- Let you join the VM to a domain without having to deploy or manage different domain controller.
 	- Provides following services 
