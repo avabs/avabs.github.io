@@ -103,3 +103,20 @@ Application has access to.
 #### Other Services
 - Azure Log Analytics is where all the logs are stored for the analysis
 - Azure Automation is the service which lets you automate few mundane tasks such as the update management, patching of the VMs.
+
+
+### Azure App Configuration
+- Allows to centralize the app settings in one location.
+- Tiers - Free and Standard
+- Has feauture toggle, which integrates with the source code currently only with .NET and C#
+
+### Microsoft Graph API
+- Exposes REST API and SDK to access data from or pogrammatically access
+    - Microsoft 365 core services
+    - Enterprise Mobility and Security Services
+    - Dynamic 365 Business Central
+    - Windows 10 services
+- Microsoft graph connector
+    - Simple way to bring data to the graph from the services
+- Microsoft graph data connect
+    - Way of storing data 
