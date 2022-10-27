@@ -24,6 +24,25 @@
 ### Azure Security Center 
 - Centralized dashboard for the security of the infrastructure.'
 
-#### Other Services
+### Other Services
 - Azure Log Analytics is where all the logs are stored for the analysis
 - Azure Automation is the service which lets you automate few mundane tasks such as the update management, patching of the VMs.
+
+
+### Azure Application Insights
+- It is Application Performance Monitor. It does monitoring and management of performance and availability of the software apps.
+- It is sub service of Azure monitor
+- Examples of APM - Datadog
+- ![image](https://user-images.githubusercontent.com/36666451/198342565-142c4886-bf40-4cf6-b666-46a5095f07c7.png)
+
+- **Open Telemetry**
+    - It is collection of open-source tools, APIs and SDK to instrument, generate, collect, and export telemetry data.
+    - It standardizes the way telemetry data (metrics, logs and traces) are generated and collected.
+    - **Wire Protocol**
+        - A wire protocol refers to a way of getting data from point to point. Eg. SOAP, AMQP
+    - Azure supports OTEL as an alternative to Azure Analytics SDK for instrumentation
+
+- Intrumentation
+    - You instrument your application by adding Azure Application Insights SDK and implementating traces.
+
+- Auto-Intrumentation. Instrumentation of the application without changing the code
