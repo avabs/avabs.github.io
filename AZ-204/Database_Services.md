@@ -22,6 +22,11 @@
     - More of an adapter for commonly used graph databases such as Amazon Neptune, Neo4j, Cosmos Db. Since it is agnostic of the database it works with.
     - graph traversal language used here is Gremlin
 
+
+### Azure Redis Cache
+- Temporarly copying frequently accessed data into fast storage (memory) which is close to Application.
+- Azure Redis Cache is accessible to Application withing Azure and outside to it.
+
 ### Azure Table
 - NoSQL key/value database within Azure Storage Accounts
 - Elements of the table
