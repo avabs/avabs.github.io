@@ -1,5 +1,49 @@
 ### Azure Monitor 
-- It provides System level monitoring. Application Insights could be used in order to acheive one-to-one monitoring with application.
+- It provides **System level monitoring**. **Application Insights** could be used in order to acheive one-to-one monitoring with application.
+- It is an comprehensive solution for **collecting**, **analyzing**, and **acting** on telemetry from your **cloud** and **on-premise** environments. 
+- Many azure services by default sends telemetry data to Azure Monitor.
+
+- **The Pillars of Observability**
+    - ![Screenshot from 2022-10-27 22-35-58](https://user-images.githubusercontent.com/36666451/198354284-dfcebea4-4a8c-42ff-aa02-5ea6523f3cce.png)
+
+- Sources of the common monitoring data
+     - Application 
+        - Instrumentation Package to collect application insights
+        - Availability test responsiveness of the application from different location on the internet
+     - OS, On the guest
+        - Diagnostic Extension collects performance counters stores in Metrics
+        - Log Analyhtics Agent for comprehensive monitoring
+        - Dependency Agent collects discovered data from process running on VM and external process dependencies.
+     - Azure Resources
+        - Metrics
+        - Resource logs
+     - Azure Subscription
+        - Service Health - provides health of the services in your subscription
+        - Active Directory
+     - Azure Tenant
+        - Active Directory
+     - Custom Sources
+        - Instrumentation package
+        - Applications
+
+- Two fundamental data stores are 
+    - logs --> Azure Monitor Logs
+        - Log Analytics is a tool used to edit and run log queries with data in Azure Monitor Logs
+        - Query Language is Kusto Query Language, it is based on relation database management systems
+    - Metrics --> Azure Monitor Metrics
+
+- Actions on data
+    - Insights
+        - App, containers, Vms, Monitoring solutions
+    - Analyze
+        - Metric Analytics, Log Analytics
+    - Visualize
+        - Dashboard, Views, Power Bi, Workbooks
+    - Respond
+        - Alerts, AutoScale
+    - Integrate
+        - Logic Apps, Export APIs
+
 
 ### Azure Analytics 
 - Similar to Splunk and ELK stack.
@@ -45,4 +89,4 @@
 - Intrumentation
     - You instrument your application by adding Azure Application Insights SDK and implementating traces.
 
-- Auto-Intrumentation. Instrumentation of the application without changing the code
+- Auto-Intrumentation. Instrumentation of the application without changing the code.
