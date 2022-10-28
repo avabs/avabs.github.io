@@ -52,11 +52,6 @@ Application has access to.
 - Autoscaling for virtual machines in Azure is supported through **Azure VM Scale Sets (VMSS)**, which are identically configured. A VM scale set service is used to design sets of identical and load-balanced Virtual Machines (VMs).
 - Azure monitor provides support for autoscale and Azure diagnostics could be used to implement custom logic for autoscaling.
 
-### Azure API Management
-- Cloud Service that is used to publish, secure, transform and maintain the API.
-- Comping mutliple application exposing APIs and functions into a single entry point.
-- We can use API management to forward the requests.
-
 ### Custom Handlers
 - a custom handler is a web server. The web server receives events from the Functions host. You then have an opportunity to write code in your preferred language to respond to the events.
 - A message queue is a software component that's used to handle messaging between processes, threads, or applications. A queue can store a message, and workers can fetch the message when it's a good time.
@@ -78,4 +73,24 @@ Application has access to.
 - Microsoft graph data connect
     - Way of storing data 
 
+### Azure API Management
+- Integrates existing backend services into modern API gateways.
+- **Product** is logical grouping of APIs.
+- **Groups** used manage the visibility of product to developer
+    - **Administrators**, full access. Manages the APIs and access.
+    - **Developer**, user with the access to the developer's portal with permissions to build applications. Builds application on top of the APIs.
+    - **Guests**, Reading permission to some services
+    - Can also create custom groups, external groups in an Associated AAD tenant.
+    - APIM does not create API, but creates facades for your APIs
+- Gateway, is where your API calls are received, and policies are applied to incoming requests and outcome responses.
+- APIM policies allow you to change the behaviour at multiple stages of an endpoint's request lifecycle.
+    - Examples - Access Restriction Policies, Cross Origin Policy
+    - Policies can be applied at
+        - Inbound request
+        - Backend - before requests reach your backend
+        - Outbound - before sending response back to client
+        - Error - when a request encounters an error
+- Cloud Service that is used to publish, secure, transform and maintain the API.
+- Comping mutliple application exposing APIs and functions into a single entry point.
+- We can use API management to forward the requests.
 
