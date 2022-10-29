@@ -93,4 +93,18 @@ Application has access to.
 - Cloud Service that is used to publish, secure, transform and maintain the API.
 - Comping mutliple application exposing APIs and functions into a single entry point.
 - We can use API management to forward the requests.
+- **OpenAPI** is the set of specification and standard to implement RESTful APIs. **Swagger** is the tool for implementing the OpenAPI specification. **WADL** and **WSDL** are other standards.
+- Caching could be achieved in two different ways - BuiltIn and External.
 
+### DAPR (Distributed Application Runtime)
+- Provides APIs that simplify microservice connectivity.
+
+### Azure Event Grid 
+- It is a Service that allows you to manage event routing from any source to any destination.
+- ![image](https://user-images.githubusercontent.com/36666451/198816025-6addf3a3-6df3-42e9-86a9-0108940cb33d.png)
+- Event grid is divided into two categories 
+    - Event Sources - services that emit data
+    - Event Handlers - services that receives data, and event grid sits in between.
+
+### Azure Event Hub
+- Event hub is an ingestor that can consume millions of events from anywhere and process them in realtimeor micro-batching.
