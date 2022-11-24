@@ -108,3 +108,18 @@ Application has access to.
 
 ### Azure Event Hub
 - Event hub is an ingestor that can consume millions of events from anywhere and process them in realtimeor micro-batching.
+- ![image](https://user-images.githubusercontent.com/36666451/198817026-93100766-877a-4e73-88dd-86616a104d64.png)
+- **Auto-inflate** feature automatically scales the number of throughput to meet your changing needs.
+- **Event-hub Capture** is the easiest way of capturing the streaming data into azure and enables you to focus more on the data processing part.
+- Event hub kafka compatibility is alternative compatible with the Apache kafka producer and consumer APIs for version 1 and above.
+![image](https://user-images.githubusercontent.com/36666451/200185183-65859d58-8a06-4a98-bddd-42abd5e10ff1.png)
+
+
+## Queue Storage
+
+### Azure Storage Queue
+- Simple service to store messages.
+- Can handle millions of messages, but no order guaranteed
+- Unlimited Queues, Unlimited Concurrent Clients
+### Azure Service Bus
+- Broader messaging service that supports queuing, pub-sub, and more advanced integration patterns.
