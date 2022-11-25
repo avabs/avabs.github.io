@@ -121,5 +121,12 @@ Application has access to.
 - Simple service to store messages.
 - Can handle millions of messages, but no order guaranteed
 - Unlimited Queues, Unlimited Concurrent Clients
+- 500TB max queue size 
+- 64KB message size
+- Lease based access mode 
 ### Azure Service Bus
 - Broader messaging service that supports queuing, pub-sub, and more advanced integration patterns.
+- 1GB to 80 GB Max Queue Size
+- 256kb or 1MB
+- 10k queues
+- lock based acccess mode
