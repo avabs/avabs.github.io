@@ -127,7 +127,6 @@ Application has access to.
 
 ### Azure Service Bus
 - Fully managed enterprise message broker that allows you to publish/subscribe to topics and queue messages.
-- <img width="1724" alt="image" src="https://user-images.githubusercontent.com/36666451/204134917-36fdc32f-23da-4317-9d01-9b7f727a63f7.png">
 - Broader messaging service that supports queuing, pub-sub, and more advanced integration patterns.
 - 1GB to 80 GB Max Queue Size
 - 256kb or 1MB
