@@ -124,9 +124,30 @@ Application has access to.
 - 500TB max queue size 
 - 64KB message size
 - Lease based access mode 
+
 ### Azure Service Bus
+- Fully managed enterprise message broker that allows you to publish/subscribe to topics and queue messages.
+- <img width="1724" alt="image" src="https://user-images.githubusercontent.com/36666451/204134917-36fdc32f-23da-4317-9d01-9b7f727a63f7.png">
 - Broader messaging service that supports queuing, pub-sub, and more advanced integration patterns.
 - 1GB to 80 GB Max Queue Size
 - 256kb or 1MB
 - 10k queues
 - lock based acccess mode
+- Key concepts
+    - Namespace works like a server, with N queues and topics. It is container for all messaging components. Can contains multiple queues and topics
+        - It may optionally space three Azure availability zone
+        - Serverless in nature 
+    - Queue contains message
+        - Queues are pull based, receivers will have to request queue to see if there are any new messages.
+        - ![image](https://user-images.githubusercontent.com/36666451/204135590-62cf43b6-9106-4964-a5a8-18bb1a7e7088.png)
+    - Sender and Receiver
+    - Topics is a queue with multiple receivers that works like a queue.
+        - ![image](https://user-images.githubusercontent.com/36666451/204135700-e68c541e-c359-4819-a976-b806e88511bc.png)
+    - Subscription is a receiver in a topic
+- Pricing 
+    - ![image](https://user-images.githubusercontent.com/36666451/204135844-0695df67-32af-48a4-a153-2932894bb7fb.png)
+- Dead letter queue
+    - It is a service implementation to store messages that fail to deliver.
+- CLI
+    - az servicebus subcommand
+    - you can not send message to queue or topics via cli command, requires sdk
