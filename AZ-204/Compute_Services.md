@@ -11,17 +11,17 @@
     - **Virtual machine** itself
     - **Public IP Address**
     - **Virtual Network** - Network where your VM will reside
-- You can bring your linux byh creating a Linux Virtual Hard Disk (VHD)
+- You can bring your linux by creating a **Linux Virtual Hard Disk (VHD)**
 
 - **Cloud-Init**
     - Cloud-init is the industry standard multi-distribution method for cross-platform cloud instance initialization. It is supported across all major public cloud providers, provisioning systems for private cloud infrastructure, and bare metal installations.
     - Cloud instance initialization is the process of the preparing the instance with all the configuration data for the operating system and runtime environment.
         - Cloud instances are intialized from a disk image and instance data
-            - Meta-data
-            - User-data - it is the script that you want to run when an instance first boots up. Eg. Install Apache web-server
-            - Vendor-data
-    - ARM (infrastructure as code) is cloud init underneath
-    - Cloud init only works for linux distribution
+            - **Meta-data**
+            - **User-data** - it is the script that you want to run when an instance first boots up. Eg. Install Apache web-server
+            - **Vendor-data**
+    - ARM (infrastructure as code) is **cloud init** underneath
+    - Cloud init only works for linux distribution.
 
 - Azure VMs are categorized into 
     - Types
@@ -40,9 +40,9 @@
         - L*
         - N*
         - H*
-- Azure Compute Unit (ACU)
-    - Provides a way of comparing compute performance across Azure SKUs. It is standardized on a Small (Standard_A1) with a value of 100
-- Hyper-V is the Microsoft's hardware virtualization product. How we have Virtual Box for linux and MacOS.
+- **Azure Compute Unit (ACU)**
+    - Provides a way of comparing compute performance across Azure SKUs. It is standardized on a Small (Standard_A1) with a value of 100.
+- **Hyper-V** is the Microsoft's hardware virtualization product. How we have **Virtual Box** for linux and MacOS.
 - Azure Gen 1 and Gen 2
     - Gen 1 are the BIOS boot based arch
     - Gen 2 are Uefi boot based arch, secure boot and can have larger boot volume upto 64 TB.
@@ -57,15 +57,14 @@
         - This only works with Windows Server.
     - Bastions, it is an azure service, which gets deployed and lets you connect over browser to the VM. It has its own subnet. It would get use where you don't have SSH client or RDP client such as chromebook.
 
-- **Windows vs Linus Server**
+- **Windows vs Linux Server**
     - Windows server requires a license
     - Requires user name and password
     - Much larger instancee to run Windows at least a B2
     - Linux requires no licenses
 
 - **Update Management**
-    - Allows to manage and install OS patches and updates for both windows and linux that are deployed in Azure
-      , on-premises, or in other cloud providers.
+    - Allows to manage and install OS patches and updates for both windows and linux that are deployed in Azure, on-premises, or in other cloud providers.
       
 ## Azure Availability Sets
 - Azure consists of racks upon racks of the server and, each rack could be a **Fault Domain**. 
@@ -78,7 +77,7 @@
 
 ## Azure App Service
 - Azure App Service is HTTP based service for hosting web applications, REST APIs, and Mobile back ends.
-- It is PaaS, so it's the Heroku equivalent for Azure or AWS Elastic Beanstalk
+- It is PaaS, so it's the **Heroku** equivalent for Azure or **AWS Elastic Beanstalk**
 - Creating App Service Plan firstly gives better idea of how can App Services are brought into same service container, although If you directly create an App Service it will automatically create App Service Plan.
 - It takes care of the following underlying infrastructure
     - Security patches for OS and languages
