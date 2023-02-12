@@ -11,6 +11,7 @@
 	- Office 365 Apps Company Branding, SLA, Two Sync between On Premise and Cloud
 	- Premium 1 Hybrid Arch, Advanced Group Access, Conditional Access
 	- Premium 2 Identity Protection, Identity Governance
+	
 - Active Directory is the on-premise component and it is somewhat parent of Azure AD
 
 - AD terminology
@@ -118,3 +119,10 @@ security tokens.
 
 ### Cheatsheet
 ![image](https://user-images.githubusercontent.com/36666451/197333576-114c9fc1-0303-417e-9420-4e61132d55a5.png)
+
+
+- "azureauth.properties" is a configuration file that specifies the authentication properties required to access an Azure service such as Azure Blob storage. The file contains information such as the Azure storage account name, account key, tenant ID, client ID, and client secret, which are used to authenticate the client and grant it access to the storage account.
+
+- The exact contents of the "azureauth.properties" file can vary depending on the specific Azure service and the method of authentication being used. For example, if using shared key authentication, the file might only contain the storage account name and key, while if using Azure Active Directory authentication, it might also include the tenant ID, client ID, and client secret.
+
+- In general, the "azureauth.properties" file is used to store configuration information that is required to authenticate the client and establish a secure connection to the Azure service. This allows developers to manage the authentication information in a centralized location, which can simplify the process of deploying applications that access Azure services.
