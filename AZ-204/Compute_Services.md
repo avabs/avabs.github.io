@@ -103,6 +103,7 @@
 - App Service Plan can have mutliple application running inside it. Depending upon the kind of pricing tier we have.
 - The Advanced Tools are what App Service deployments are built on top of. The advanced tools engine is called Kudu. 
 - By default azure domain names such as azurewebsites are secured and can be accessed over http and https protocols, but having a custom domain and securing that requires SSL and TLS certification.
+- App service plan needs to be in standard/premium for Backup/Restore option.
 
 ### Runtime Environment
 - A runtime for Azure App Service will be a pre-defined container that your programming language and commonly used libs for that language installed.
