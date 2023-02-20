@@ -121,3 +121,6 @@
 - Request Units 
 - Azure Cosmos DB exposes a "change feed". The change feed support in Azure Cosmos DB works by listening to a database container for changes. DynamoDB has streams. Change feed is supported by all APIs except Table API. 
 ![image](https://user-images.githubusercontent.com/36666451/196996297-9bec247c-2adf-4b3a-8082-bb5501632150.png)
+
+- Partitioning in Cosmos DB 
+    - Each item in a container has a partition key. Partition key is used for scaling purposes. Each Cosmos DB instance has Physical Partition and Logical Partition. Physical partition are the reserved physical space and compute on SSD whereas Logical Partition is a logical partition within physical partition and logical partition from values of Partition Key.

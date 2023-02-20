@@ -126,3 +126,18 @@ security tokens.
 - The exact contents of the "azureauth.properties" file can vary depending on the specific Azure service and the method of authentication being used. For example, if using shared key authentication, the file might only contain the storage account name and key, while if using Azure Active Directory authentication, it might also include the tenant ID, client ID, and client secret.
 
 - In general, the "azureauth.properties" file is used to store configuration information that is required to authenticate the client and establish a secure connection to the Azure service. This allows developers to manage the authentication information in a centralized location, which can simplify the process of deploying applications that access Azure services.
+
+- OAuth concepts
+What happens when a client app calls an API with a request that is secured using TLS and OAuth? The following is an abbreviated example flow:
+
+The client (the calling app, or bearer) authenticates using credentials to an identity provider.
+
+The client obtains a time-limited access token (a JSON web token, or JWT) from the identity provider's authorization server.
+
+The identity provider (for example, Azure AD) is the issuer of the token, and the token includes an audience claim that authorizes access to a resource server (for example, to a backend API, or to the API Management gateway itself).
+
+The client calls the API and presents the access token - for example, in an Authorization header.
+
+The resource server validates the access token. Validation is a complex process that includes a check that the issuer and audience claims contain expected values.
+
+Based on token validation criteria, access to resources of the [backend] API is then granted.
