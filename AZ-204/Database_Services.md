@@ -36,17 +36,25 @@
         - Identifies the entity within a partition
 
 ### Azure Cosmos DB
+
+#### APIs
 - Types of datastorage offered by Cosmos
     - SQL (Document datastore)
     - Gremlin (graph datastore) 
     - MongoDB (document datastore)
     - Azure tables (key/value datastore)
-- Cosmos DB's nature of communication is dependent upon the type of API you select - 
+- Cosmos DB's nature of communication is dependent upon the type of API you select  
     - Core SQL API
     - Azure Table API
     - Mongo DB API
     - Cassandra API
     - Gremlin API
+
+- Globally distributed and multi-model database, provides varieties of API to access the database.
+- You priortize the regions as failover and make regions read, write only as well.
+- It offers API for SQL, Mongo, Cassandra, Gremlin. With Cosmos DB we can run mutliple database engines
+
+#### Components 
 - Components of the Cosmos DB
     - Database 
         - This is the logical namespace for our data, users, permissions
@@ -55,55 +63,55 @@
     - Collection
         - Billable entity
 - Depth of the data in cosmosdb -  Cosmos Account -> Database -> Container -> Item 
-- We scale the db in terms of request units unlike traditional databases. One Ru is 1kb item read from a Cosmos Db Container.
+- Containers
+    - They are useful for scalability, Idea here is to separate different Azure Cosmos Db into container so that each one is user configurable and can be a different API based.
+    
+#### Request Units 
+- We scale the db in terms of request units unlike traditional databases. One Ru is 1kb item read from a Cosmos Db Container. The cost to do a point read (fetching a single item by its ID and partition key value) for a 1-KB item is 1 Request Unit (or 1 RU). 
 - Provisioned Throughput is ideal always on production. Throughput is evenly distributed to partitions. Autoscaling (Provisioned) - Can maximum RUs but minimum RUs would 10% of the Maximum. 
 - Cosmos DB serverless - pay for what you use.
+
+#### Consistency Levels
 - Data consistency levels - 
 ![image](https://user-images.githubusercontent.com/36666451/172935682-c6009b3f-d5dc-46e9-ab70-6b690ab0695a.png)
  - Strong and Bounded staleness will use almost twice of the normal of RUs for a request 
+
+
+#### Partitioning
 - Items in container are divided into logical partition and physical partition have one or more logical partition and then there are replica set managed by physical partition for fault tolerance.    
 - Hierarchy of the partitioning --> Physical Partition --> Replica Set --> Logical Partition --> Data        
 - Partition key serves as the means of rounting the request to correct partition.
 - Unique keys add layer of data integrity to their database.
 - Basically Az takes the hash of the partition key valueand spreads the logical spaces across the physical partition, so it will calculate the hash value and map it to correct logical partition.
 - Hot partition is the scenario when one of the physical partition is loaded with most the data in the database.
-- Server Side Capabilities
-    - Used withing database engine 
-        - Stored Procedures
-            - Supported by SQL API
-            - Supports Javascript
-            - Works on a single partition key
-        - Triggers 
-            - Supports Java Script
-            - Pre or post
-            - Not guaranteed to be executed, must be specified in the request
-        - User defined Functions
-            - Supports JS
-            - Custom function that could be used in query
-    - Outside of the database engine
-        - Change feed
-            - Just like an Azure Function where Cosmos DB trigger is used and every action on the collection is logged.
-            - Can notify you for update or add action but not for delete, there is a workaround.
-            - Not supported for Azure Table API
-- Globally distributed and multi-model database, provides varieties of API to access the database.
-- You priortize the regions as failover and make regions read, write only as well.
-- It offers API for SQL, Mongo, Cassandra, Gremlin. With Cosmos DB we can run mutliple database engines
-- Database as a service - serverless
-- Cost is determined with the help of Request Units
-- Partitioning and Indexing
-- Phycial Partiotions that comprise compute hardware resources and it contains logical partitions
-- Container is basic abstraction of data sets, where it would span through multiple partitions and this contains your data.
 - Every document is identifide by it's partition key and row key.
-- Security 
-- Supports HTTPS and TLS
-- Master keys for admins and resource tokens for clients
-- Key-value
-- Graph
-- Column-family
+- Partitioning in Cosmos DB 
+    - Each item in a container has a partition key. Partition key is used for scaling purposes. Each Cosmos DB instance has Physical Partition and Logical Partition. Physical partition are the reserved physical space and compute on SSD whereas Logical Partition is a logical partition within physical partition and logical partition from values of Partition Key.
+
+#### Server Side Capabilities
+- Used withing database engine 
+    - Stored Procedures
+        - Supported by SQL API
+        - Supports Javascript
+        - Works on a single partition key
+    - Triggers 
+        - Supports Java Script
+        - Pre or post
+        - Not guaranteed to be executed, must be specified in the request
+    - User defined Functions
+        - Supports JS
+        - Custom function that could be used in query
+- Outside of the database engine
+    - Change feed
+        - Just like an Azure Function where Cosmos DB trigger is used and every action on the collection is logged.
+        - Can notify you for update or add action but not for delete, there is a workaround.
+        - Not supported for Azure Table API
 - Indexing is done automatically.
 - Data Replication between Azure Regions is automatic.
-- Containers
-    - They are useful for scalability, Idea here is to separate different Azure Cosmos Db into container so that each one is user configurable and can be a different API based.
+
+
+
+#### Capacity Modes
 - Cosmos DB has two capacity modes
     - Provisioned throughput 
         - Sets certain RUs to the container, better when traffic is already predicted
@@ -118,9 +126,8 @@
 - Two ways to read data from Cosmos DB
     - Points Reads - Key/value lookup on a Single Item ID and partition key - 1 RUs 
     - Queries - A query allows you to return multiple items - At least 2.3 RUs 
-- Request Units 
+
+#### Change Feed
 - Azure Cosmos DB exposes a "change feed". The change feed support in Azure Cosmos DB works by listening to a database container for changes. DynamoDB has streams. Change feed is supported by all APIs except Table API. 
 ![image](https://user-images.githubusercontent.com/36666451/196996297-9bec247c-2adf-4b3a-8082-bb5501632150.png)
 
-- Partitioning in Cosmos DB 
-    - Each item in a container has a partition key. Partition key is used for scaling purposes. Each Cosmos DB instance has Physical Partition and Logical Partition. Physical partition are the reserved physical space and compute on SSD whereas Logical Partition is a logical partition within physical partition and logical partition from values of Partition Key.
