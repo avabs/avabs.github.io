@@ -127,7 +127,8 @@ security tokens.
 
 - In general, the "azureauth.properties" file is used to store configuration information that is required to authenticate the client and establish a secure connection to the Azure service. This allows developers to manage the authentication information in a centralized location, which can simplify the process of deploying applications that access Azure services.
 
-- OAuth concepts
+
+### OAuth concepts
 What happens when a client app calls an API with a request that is secured using TLS and OAuth? The following is an abbreviated example flow:
 
 The client (the calling app, or bearer) authenticates using credentials to an identity provider.
@@ -141,3 +142,7 @@ The client calls the API and presents the access token - for example, in an Auth
 The resource server validates the access token. Validation is a complex process that includes a check that the issuer and audience claims contain expected values.
 
 Based on token validation criteria, access to resources of the [backend] API is then granted.
+
+
+### RBAC and CBAC
+- RBAC refers to role based access control whereas latter is claim based access control. If role is "Senior Software Engineer" then an attribute could be "Good Coder" so letting a "Good Coder" change something is granted upon the claim that he's good whereas granting him to change just because he's Senior is RBAC. Reference - https://stackoverflow.com/questions/22814023/role-based-access-control-rbac-vs-claims-based-access-control-cbac-in-asp-n
