@@ -65,7 +65,7 @@
 - Depth of the data in cosmosdb -  Cosmos Account -> Database -> Container -> Item 
 - Containers
     - They are useful for scalability, Idea here is to separate different Azure Cosmos Db into container so that each one is user configurable and can be a different API based.
-    
+
 #### Request Units 
 - We scale the db in terms of request units unlike traditional databases. One Ru is 1kb item read from a Cosmos Db Container. The cost to do a point read (fetching a single item by its ID and partition key value) for a 1-KB item is 1 Request Unit (or 1 RU). 
 - Provisioned Throughput is ideal always on production. Throughput is evenly distributed to partitions. Autoscaling (Provisioned) - Can maximum RUs but minimum RUs would 10% of the Maximum. 
@@ -87,6 +87,7 @@
 - Every document is identifide by it's partition key and row key.
 - Partitioning in Cosmos DB 
     - Each item in a container has a partition key. Partition key is used for scaling purposes. Each Cosmos DB instance has Physical Partition and Logical Partition. Physical partition are the reserved physical space and compute on SSD whereas Logical Partition is a logical partition within physical partition and logical partition from values of Partition Key.
+- Querying a container using partition key is more efficient because it only goes through a single physical partition, what if we don't then we'll end querying every physical partition and then accumulate the results which will end up more RUs even if there is no data in the physical partition.
 
 #### Server Side Capabilities
 - Used withing database engine 
