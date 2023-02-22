@@ -1,42 +1,31 @@
-### Azure Storage Accounts
-- Contains all of your Azure Storage data objects: blobs, files, queue, table and disks
-- Azure provides different types of Storage Accounts 
-    - General purpose v1 (legacy)
-    - General purpose v2
-    - Blobstorage (legacy)
-    - Block Blob storage
-    - File Storage
-- These differs by there features 
-    - Supported Services - Blob, File, Queue, Table, Disk and Data Lake
-    - Performance Tier - Standard (HDD) and Premium (SSD) - IOPS based, higher the IOPS better read/write speeds
-    - Access Tier - Hot, cool and archive
-    - Replication - Redundancy to the zones
-    - Deployment Model - ARM or classic
-- **Storage Types**
-    - ![image](https://user-images.githubusercontent.com/36666451/197263447-dfdd00c7-489c-461e-afe0-962ddf566e33.png)
+### Azure Storage Account
+![image](https://user-images.githubusercontent.com/36666451/197263447-dfdd00c7-489c-461e-afe0-962ddf566e33.png)
 
-#### Azure Storage Services
-- Azure provides different storage services. These are all under Azure Storage Accounts
-    - **Blob storage**
-        - Storage for the object, unstructed data such as text and binary.
-    - **Azure Queues**
-        - Provides storage for the messages.
-        - A message could be <= 64kb
-    - **Azure Tables**
-        - For NoSQL data
-        - Provides storage for key/value data and schema-less design
-    - **Azure Files**
-        - File share system for cloud or on prem.
-        - Could be mounted on multiple OSs - Windows, Linux and Mac
-    - **Azure Disks**
-        - Block level storage volumes
-        - Provides storage capabilites for the VMs
-        - Just like a physical disks - HDD, SDD disks
+### Azure Storage Services
+- **Blob storage**
+    - Storage for the object, unstructed data such as text and binary.
+- **Azure Queues**
+    - Provides storage for the messages.
+    - A message could be <= 64kb
+- **Azure Tables**
+    - For NoSQL data
+    - Provides storage for key/value data and schema-less design
+- **Azure Files**
+    - File share system for cloud or on prem.
+    - Could be mounted on multiple OSs - Windows, Linux and Mac
+- **Azure Disks**
+    - Block level storage volumes
+    - Provides storage capabilites for the VMs
+    - Just like a physical disks - HDD, SDD disks
 - Containers could be created in order to further categorize data into these above storage types
 
 #### Azure Blob Storage
-- Hierarchy of Blob storage in Azure: **Storage Account >> Container >> Blob**. 
-- Blobs are organized into containers, similar to directories. Types of Blobs supported in AZ are: **Block Blobs** (for storing large data and can be deleted or updated), **Append Blobs** (optimized for append operations and cannot be deleted or updated), and **Page Blobs** (for random access files storage, commonly used for virtual hard disks on Azure VM).
+- Hierarchy of Blob storage in Azure: **Storage Account >> Container >> Blob**.
+
+- Types of Blobs supported in AZ are: 
+    - **Block Blobs** (for storing large data and can be deleted or updated), 
+    - **Append Blobs** (optimized for append operations and cannot be deleted or updated), and, 
+    - **Page Blobs** (for random access files storage, commonly used for virtual hard disks on Azure VM).
 
 - Azure also provides an immutable object storage policy where objects cannot be deleted or modified. Moving blobs between containers is not supported natively but can be achieved using **AzCopy** or Data Movement Library. Moving blobs between storage accounts can be done using AzCopy.
 
@@ -49,8 +38,6 @@
 - Blob storage can be accessed using the Azure SDK, which is a collection of client libraries.
 
 - The security principal may be a user, group, application service principal, or Azure managed identity. The security principal is authenticated by Azure AD to return an OAuth 2.0 token. The token can then be used to authorize a request against the Blob service.
-
-- A shared access signature (SAS) provides secure delegated access to resources in a storage account. With a SAS, you have granular control over how a client can access data. You can specify what resource the client may access, what permissions they have to those resources, and how long the SAS is valid
 
 #### Azure Files
 - Enables file share on the cloud.
@@ -70,6 +57,10 @@
     - Data - Stores application data
     - OS - hosts the VM's OS and boot volume
     - TEMP - not a managed disk, store pages and swap files
+
+### SAS
+- A shared access signature (SAS) provides secure delegated access to resources in a storage account. With a SAS, you have granular control over how a client can access data. You can specify what resource the client may access, what permissions they have to those resources, and how long the SAS is valid. SAS is given to a client who require accesss to resource for short time. 
+
 
 ### Azure Key Vault
 - Helps you safeguard cryptographic keys and other secrets used by cloud apps and services.
