@@ -89,6 +89,13 @@
     - Each item in a container has a partition key. Partition key is used for scaling purposes. Each Cosmos DB instance has Physical Partition and Logical Partition. Physical partition are the reserved physical space and compute on SSD whereas Logical Partition is a logical partition within physical partition and logical partition from values of Partition Key.
 - Querying a container using partition key is more efficient because it only goes through a single physical partition, what if we don't then we'll end querying every physical partition and then accumulate the results which will end up more RUs even if there is no data in the physical partition.
 
+- Types of Partitioning 
+    - Horizontal 
+        - Datasets/Tables are divided into horizontal partition resulting in all the attributes of the table but having different data. Each horizontal partition is known as **Shard** and process is known as **Sharding**.  
+    - Vertical
+        - Dividing the data column wise.
+    - Functional
+        - Data is aggregated according to how it is used by each bounded context in the system
 #### Server Side Capabilities
 - Used withing database engine 
     - Stored Procedures
