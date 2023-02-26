@@ -105,6 +105,7 @@ Application has access to.
 - Event grid is divided into two categories 
     - Event Sources - services that emit data
     - Event Handlers - services that receives data, and event grid sits in between.
+- Queues, topics, and subscriptions can be temporarily suspended. Suspension puts the entity into a disabled state in which all messages are maintained in storage. However, messages can't be removed or added, and the respective protocol operations yield errors.
 
 ### Azure Event Hub
 - Event hub is an ingestor that can consume millions of events from anywhere and process them in realtimeor micro-batching.
