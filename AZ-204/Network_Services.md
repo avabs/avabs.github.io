@@ -62,3 +62,10 @@ Routes
 Traffic Accelaration
 - Connecting user to edge location
 - Takes direct path
+
+
+### Azure VPN
+- VPN is a sec encrypted secure tunnel/channel of the communication between parties. 
+- **Site to Site** - Connects one entire site to another and it is always on. 
+    - IPSec is a framework to establish secure channel between routers.
+- **Remote Access** - So this is how we connect to our corporate network because we could be anywhere. 
