@@ -356,3 +356,11 @@ on them, conditions and produces output
               - an executable - handler.exe
               - it should server http request
               - function.json
+
+### Azure Managed Disk Encryption 
+- Azure Disk Encryption
+	- ADE encrypts the OS and data disks of the VM using **DM-Crypt** in **Linux** or **Bit-Locker** in Windows. ADE can use Azure Key Vault Integration to store the encryption keys and secrets.
+- Azure Disk Storage Server-Side Encryption (Encryption at rest) 
+	- Auutomatically encrypts the Azure Managed Disk  (OS and the data disk) when persisting them to Storage Clusters.
+- Encrption at Host 
+	- Ensures that data stored on the VM host hosting your VM is encrypted at rest and flows encrypted to the Storage clusters.
